@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0021D8">
+
+  <title>toolbox</title>
+
+  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="alternate" type="application/rss+xml" title="toolbox" href="http://localhost:4000/feed.xml" />
+
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" sizes="144x144" href="apple-touch-icon.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:title" content="Toolbox">
+  <meta property="twitter:image" content="https://containers.github.io/toolbox/assets/card.png" />
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:description" content="Toolbox: Easy Container Environments">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Toolbox">
+  <meta property="og:url" content="https://containers.github.io/toolbox/">
+  <meta property="og:description" content="Toolbox: Easy Container Environments">
+  <meta property="og:image" content="https://containers.github.io/toolbox/assets/card.png">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="page-logo" href="https://containers.github.io/toolbox/">
+      <img src="assets/page-logo.svg" alt="toolbox">
+    </a>
+
+  </div>
+
+</header>
+
+
+    <div class="container">
+      <p><img src="assets/toolbox.gif" alt="Toolbox" class="full pixels" /></p>
+
+<p><a href="https://github.com/containers/toolbox">Toolbox</a> is a tool for Linux operating systems, which allows the use of containerized command line environments. It is built on top of <a href="https://podman.io/">Podman</a> and other standard container technologies from <a href="https://opencontainers.org/">OCI</a>.</p>
+
+<p>This is particularly useful on <a href="https://ostree.readthedocs.io/en/latest/">OSTree</a> based operating systems like
+<a href="https://coreos.fedoraproject.org/">Fedora CoreOS</a> and <a href="https://silverblue.fedoraproject.org/">Silverblue</a>. The intention of these systems is to discourage installation of software on the host, and instead install software as (or in) containers — they mostly don’t even have package managers like DNF or YUM. This makes it difficult to set up a development environment or install tools for debugging in the usual way.</p>
+
+<p>Toolbox solves this problem by providing a fully mutable container within which one can install their favourite development and debugging tools, editors and SDKs. For example, it’s possible to do <code class="language-plaintext highlighter-rouge">yum install ansible</code> without affecting the base operating system.</p>
+
+<p>However, this tool doesn’t <em>require</em> using an OSTree based system. It works equally well on Fedora Workstation and Server, and that’s a useful way to incrementally adopt containerization.</p>
+
+<p>The toolbox environment is based on an <a href="https://www.opencontainers.org/">OCI</a> image. On Fedora this is the <code class="language-plaintext highlighter-rouge">fedora-toolbox</code> image. This image is used to create a toolbox container that seamlessly integrates with the rest of the operating system by providing access to the user’s home directory, the Wayland and X11 sockets, networking (including Avahi), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc..</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Toolbox is installed by default on Fedora Silverblue. On other operating systems it’s just a matter of installing the <code class="language-plaintext highlighter-rouge">toolbox</code> package.</p>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="create-your-toolbox-container">Create your toolbox container:</h3>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[user@hostname ~]$</span><span class="w"> </span>toolbox create
+<span class="go">Created container: fedora-toolbox-33
+Enter with: toolbox enter
+</span><span class="gp">[user@hostname ~]$</span><span class="w">
+</span></code></pre></div></div>
+<p>This will create a container called <code class="language-plaintext highlighter-rouge">fedora-toolbox-&lt;version-id&gt;</code>.</p>
+
+<h3 id="enter-the-toolbox">Enter the toolbox:</h3>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[user@hostname ~]$</span><span class="w"> </span>toolbox enter
+<span class="gp">⬢[user@toolbox ~]$</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="remove-a-toolbox-container">Remove a toolbox container:</h3>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[user@hostname ~]$</span><span class="w"> </span>toolbox <span class="nb">rm </span>fedora-toolbox-33
+<span class="gp">[user@hostname ~]$</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="dependencies-and-building">Dependencies and Building</h2>
+
+<p>Toolbox requires at least Podman 1.4.0 to work, and uses the Meson build system.</p>
+
+<p>The following dependencies are required to build it:</p>
+
+<ul>
+  <li>meson</li>
+  <li>go-md2man</li>
+  <li>systemd</li>
+  <li>go</li>
+  <li>ninja</li>
+</ul>
+
+<p>The following dependencies enable various optional features:</p>
+
+<ul>
+  <li>bash-completion</li>
+</ul>
+
+<p>It can be built and installed as any other typical Meson-based project:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[user@hostname toolbox]$</span><span class="w"> </span>meson <span class="nt">-Dprofile_dir</span><span class="o">=</span>/etc/profile.d builddir
+<span class="gp">[user@hostname toolbox]$</span><span class="w"> </span>ninja <span class="nt">-C</span> builddir
+<span class="gp">[user@hostname toolbox]$</span><span class="w"> </span><span class="nb">sudo </span>ninja <span class="nt">-C</span> builddir <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>Toolbox is written in Go. Consult the <a href="https://github.com/containers/toolbox/blob/main/src/go.mod">src/go.mod</a> file for a full list of all the Go dependencies.</p>
+
+<p>By default, Toolbox uses Go modules and all the required Go packages are automatically downloaded as part of the build. There’s no need to worry about the Go dependencies, unless the build environment doesn’t have network access or any such peculiarities.</p>
+
+<h2 id="distro-support">Distro support</h2>
+
+<p>By default, Toolbox creates the container using an <a href="https://www.opencontainers.org/">OCI</a> image called <code class="language-plaintext highlighter-rouge">&lt;ID&gt;-toolbox:&lt;VERSION-ID&gt;</code>, where <code class="language-plaintext highlighter-rouge">&lt;ID&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;VERSION-ID&gt;</code> are taken from the host’s <code class="language-plaintext highlighter-rouge">/usr/lib/os-release</code>. For example, the default image on a Fedora 33 host would be <code class="language-plaintext highlighter-rouge">fedora-toolbox:33</code>.</p>
+
+<p>This default can be overridden by the <code class="language-plaintext highlighter-rouge">--image</code> option in <code class="language-plaintext highlighter-rouge">toolbox create</code>, but operating system distributors should provide an adequately configured default image to ensure a smooth user experience.</p>
+
+<h2 id="image-requirements">Image requirements</h2>
+
+<p>Toolbox customizes newly created containers in a certain way. This requires certain tools and paths to be present and have certain characteristics inside the OCI image.</p>
+
+<p>Tools:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">getent(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">id(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ln(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">mkdir(1)</code>: for hosts where <code class="language-plaintext highlighter-rouge">/home</code> is a symbolic link to <code class="language-plaintext highlighter-rouge">/var/home</code></li>
+  <li><code class="language-plaintext highlighter-rouge">passwd(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">readlink(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">rm(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">rmdir(1)</code>: for hosts where <code class="language-plaintext highlighter-rouge">/home</code> is a symbolic link to <code class="language-plaintext highlighter-rouge">/var/home</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sleep(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">test(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">touch(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">unlink(1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">useradd(8)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">usermod(8)</code></li>
+</ul>
+
+<p>Paths:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/etc/host.conf</code>: optional, if present not a bind mount</li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/hosts</code>: optional, if present not a bind mount</li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/krb5.conf.d</code>: directory, not a bind mount</li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/localtime</code>: optional, if present not a bind mount</li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/machine-id</code>: optional, not a bind mount</li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/resolv.conf</code>: optional, if present not a bind mount</li>
+  <li><code class="language-plaintext highlighter-rouge">/etc/timezone</code>: optional, if present not a bind mount</li>
+</ul>
+
+<p>Toolbox enables <code class="language-plaintext highlighter-rouge">sudo(8)</code> access inside containers. The following is necessary for that to work:</p>
+
+<ul>
+  <li>
+    <p>The image should have <code class="language-plaintext highlighter-rouge">sudo(8)</code> enabled for users belonging to either the   <code class="language-plaintext highlighter-rouge">sudo</code> or <code class="language-plaintext highlighter-rouge">wheel</code> groups, and the group itself should exist. File an <a href="https://github.com/containers/toolbox/issues/new">issue</a> if you really need support for a different group. However, it’s preferable to keep this list as short as possible.</p>
+  </li>
+  <li>
+    <p>The image should allow empty passwords for <code class="language-plaintext highlighter-rouge">sudo(8)</code>. This can be achieved by either adding the <code class="language-plaintext highlighter-rouge">nullok</code> option to the <code class="language-plaintext highlighter-rouge">PAM(8)</code> configuration, or by add the <code class="language-plaintext highlighter-rouge">NOPASSWD</code> tag to the <code class="language-plaintext highlighter-rouge">sudoers(5)</code> configuration.</p>
+  </li>
+</ul>
+
+<p>Since Toolbox only works with OCI images that fulfill certain requirements, it will refuse images that aren’t tagged with <code class="language-plaintext highlighter-rouge">com.github.containers.toolbox="true"</code> and <code class="language-plaintext highlighter-rouge">com.github.debarshiray.toolbox="true"</code> labels. These labels are meant to be used by the maintainer of the image to indicate that they have read this document and tested that the image works with Toolbox. You can use the following snippet in a Dockerfile for this:</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">LABEL</span><span class="s"> com.github.containers.toolbox="true"</span>
+</code></pre></div></div>
+
+<p>The label <code class="language-plaintext highlighter-rouge">com.github.debarshiray.toolbox="true"</code> was used in previous versions of toolbox but is currently deprecated.</p>
+
+<p><a href="https://softwarefactory-project.io/zuul/t/local/builds?project=containers/toolbox"><img src="https://zuul-ci.org/gated.svg" alt="Zuul" /></a> <a href="https://softwarefactory-project.io/zuul/t/local/builds?project=containers%2Ftoolbox&amp;pipeline=periodic"><img src="https://softwarefactory-project.io/zuul/api/tenant/local/badge?project=containers/toolbox&amp;pipeline=periodic" alt="Daily Pipeline" /></a> <a href="https://www.archlinux.org/packages/community/x86_64/toolbox/"><img src="https://img.shields.io/archlinux/v/community/x86_64/toolbox" alt="Arch Linux package" /></a> <a href="https://src.fedoraproject.org/rpms/toolbox/"><img src="https://img.shields.io/fedora/v/toolbox/rawhide" alt="Fedora package" /></a></p>
+
+    </div>
+
+    <footer class="site-footer">
+  <p>&copy; toolbox, 2021</p>
+
+  <p><a href="https://github.com/containers/toolbox/tree/gh-pages">Website source</a></p>
+</footer>
+
+
+  </body>
+
+</html>
