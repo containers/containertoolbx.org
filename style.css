@@ -149,7 +149,10 @@ img {
   max-width: 100%;
   }
   img.full { width: 100%; }
-  img.pixels { image-rendering: pixelated; }
+  img.pixels { 
+    image-rendering: crisp-edges; /* older firefox browsers */ 
+    image-rendering: pixelated; 
+  }
 
 /* Layout */
 .container {
