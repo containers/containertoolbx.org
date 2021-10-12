@@ -1,9 +1,9 @@
 # Site settings
-title: toolbox
+title: toolbx
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://containertoolbx.org" # the base hostname & protocol for your site
 sourceurl: "https://github.com/containers/containertoolbx.org"
-description: "Toolbox: Easy Container Environments"
+description: "Toolbx: Easy Container Environments"
 
 permalink: /:title/
 
