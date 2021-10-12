@@ -144,11 +144,11 @@ hr {
 }
 
 img {
-  display: block;
+  
   margin: 2rem auto;
   max-width: 100%;
   }
-  img.full { width: 100%; }
+  img.full { width: 100%; display: block; }
   img.pixels { 
     image-rendering: crisp-edges; /* older firefox browsers */ 
     image-rendering: pixelated; 
