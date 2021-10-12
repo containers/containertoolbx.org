@@ -101,6 +101,22 @@ h1 {
     font-size: 38px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    filter: invert(100%) hue-rotate(180deg);
+  }
+
+  html {
+    background-color: var(--dark5);
+  }
+
+  img, video, iframe {
+    filter: invert(100%) hue-rotate(180deg);
+  }
+}
+
+
 h2 {
   margin-top: 3rem;
   font-size: 1.2rem;
@@ -144,12 +160,22 @@ img {
 }
 
 /* Singletons */
-.page-logo {
+#logo {
   display: block;
+  width: 136px; height: 26px;
+  background: url('assets/page-logo.svg') no-repeat center;
   padding: 5rem 0 3rem;
+  margin: 0 auto;
+  position: relative;
 }
+  #logo a {
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    color: rgba(0,0,0,0); /* make text transparent */
+    cursor: pointer;
+  }
 .page-logo > img {
-  display: block;
   margin: 0 auto;
 }
 
