@@ -1,5 +1,5 @@
-Toolbox website
-===============
+Toolbx website
+==============
 
 To set up jekyll locally on Fedora:
 
