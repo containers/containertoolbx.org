@@ -34,6 +34,10 @@ See our [detailed guide](install).
 * [Toolbox -- a fall 2019 update](https://debarshiray.wordpress.com/2019/11/01/toolbox-a-fall-2019-update/)
 * [Video talk -- Toolbox: using Silverblue for development](https://www.youtube.com/watch?v=BGXs0W6NRBM) by Debarshi Ray
 
+## Press Information
+We are very happy to answer questions from journalists and tech writers. The toolbox logo is licensed CCBYSA3.0 and can be [downloaded here](/assets/logo/toolbx-logo.zip).
+
+Press queries, including requests for comments and interviews can be directed to [press@containertoolbx.org](mailto:press@containertoolbx.org).
 
 
 ## Get Involved
