@@ -19,3 +19,11 @@ The toolbx environment is based on an [OCI](https://www.opencontainers.org/) ima
 ## Installation & Use
 
 See our [detailed guide](install).
+
+## Get Involved
+Toolbx is Free Software and is developed in the open. Code can be found on [Github](https://github.com/containers/toolbox).
+
+  * Join us on Matrix at [#toolbx:matrix.org](https://matrix.to/#/#toolbx:matrix.org).
+  * Issues are tracked on [Github Issues](https://github.com/containers/toolbox/issues).
+  * Contributors are bound to agree to our [Code of Conduct](https://github.com/containers/common/blob/main/CODE-OF-CONDUCT.md).
+  * Follow us on [Twitter](https://twitter.com/containertoolbx).
