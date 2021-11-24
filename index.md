@@ -20,6 +20,22 @@ The toolbx environment is based on an [OCI](https://www.opencontainers.org/) ima
 
 See our [detailed guide](install).
 
+## Articles & Blog Posts
+#### 2021
+* [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/)
+* [We are now on Matrix](https://debarshiray.wordpress.com/2021/11/24/toolbx-is-now-on-matrix/)
+* [Toolbx: Redhat is hiring a software engineer](https://debarshiray.wordpress.com/2021/11/15/toolbx-red-hat-is-hiring-a-software-engineer/)
+* [Toolbox is now Toolbx](https://debarshiray.wordpress.com/2021/11/10/toolbox-is-now-toolbx/)
+* [2021 update](https://debarshiray.wordpress.com/2021/01/14/toolbox-after-a-gap-of-15-months/)
+* [Video talk -- Interactive container environment](https://www.youtube.com/watch?v=qdpg-zBvNz8) by Ondřej Míchal
+
+#### 2019
+* [Fedora Magazine -- a quick introduction to Toolbox](https://fedoramagazine.org/a-quick-introduction-to-toolbox-on-fedora/)
+* [Toolbox -- a fall 2019 update](https://debarshiray.wordpress.com/2019/11/01/toolbox-a-fall-2019-update/)
+* [Video talk -- Toolbox: using Silverblue for development](https://www.youtube.com/watch?v=BGXs0W6NRBM) by Debarshi Ray
+
+
+
 ## Get Involved
 Toolbx is Free Software and is developed in the open. Code can be found on [Github](https://github.com/containers/toolbox).
 
