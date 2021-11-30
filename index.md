@@ -35,15 +35,15 @@ See our [detailed guide](install).
 * [Video talk -- Toolbox: using Silverblue for development](https://www.youtube.com/watch?v=BGXs0W6NRBM) by Debarshi Ray
 
 ## Press Information
-We are very happy to answer questions from journalists and tech writers. The toolbox logo is licensed CCBYSA3.0 and can be [downloaded here](/assets/logo/toolbx-logo.zip).
+We are very happy to answer questions from journalists and tech writers. The toolbox logo is licensed [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and can be [downloaded here](/assets/logo/toolbx-logo.zip).
 
 Press queries, including requests for comments and interviews can be directed to [press@containertoolbx.org](mailto:press@containertoolbx.org).
 
 
 ## Get Involved
-Toolbx is Free Software and is developed in the open. Code can be found on [Github](https://github.com/containers/toolbox).
+Toolbx is Free Software and is developed in the open. Code can be found on [GitHub](https://github.com/containers/toolbox).
 
   * Join us on Matrix at [#toolbx:matrix.org](https://matrix.to/#/#toolbx:matrix.org).
-  * Issues are tracked on [Github Issues](https://github.com/containers/toolbox/issues).
+  * Issues are tracked on [GitHub Issues](https://github.com/containers/toolbox/issues).
   * Contributors are bound to agree to our [Code of Conduct](https://github.com/containers/common/blob/main/CODE-OF-CONDUCT.md).
   * Follow us on [Twitter](https://twitter.com/containertoolbx).
