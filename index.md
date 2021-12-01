@@ -50,6 +50,6 @@ Toolbx is Free Software and is developed in the open. Code can be found on [GitH
 
   * Join us on Matrix at [#toolbx:matrix.org](https://matrix.to/#/#toolbx:matrix.org).
   * Issues are tracked on [GitHub Issues](https://github.com/containers/toolbox/issues).
-* Security issues can be reported at a [private list](mailto:security@lists.podman.io). Here's our [security policy](https://github.com/containers/common/blob/main/SECURITY.md).
+  * Security issues can be reported at a [private list](mailto:security@lists.podman.io). Here's our [security policy](https://github.com/containers/common/blob/main/SECURITY.md).
   * Contributors are bound to agree to our [Code of Conduct](https://github.com/containers/common/blob/main/CODE-OF-CONDUCT.md).
   * Follow us on [Twitter](https://twitter.com/containertoolbx).
