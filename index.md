@@ -42,7 +42,7 @@ See our [detailed guide](install).
 ## Press Information
 We are very happy to answer questions from journalists and tech writers. The toolbox logo is licensed [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and can be [downloaded here](/assets/logo/toolbx-logo.zip).
 
-Press queries, including requests for comments and interviews can be directed to [press@containertoolbx.org](mailto:press@containertoolbx.org).
+Press queries, including requests for comments and interviews can be directed to [press@lists.podman.io](mailto:press@lists.podman.io).
 
 
 ## Get Involved
