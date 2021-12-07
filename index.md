@@ -38,7 +38,12 @@ See our [detailed guide](install).
 #### 2019
 * [A quick introduction to Toolbox](https://fedoramagazine.org/a-quick-introduction-to-toolbox-on-fedora/) by Fedora Magazine
 * [Toolbox -- a fall 2019 update](https://debarshiray.wordpress.com/2019/11/01/toolbox-a-fall-2019-update/) by Debarshi Ray
+* [Fedora Toolbox is now just Toolbox](https://debarshiray.wordpress.com/2019/04/03/fedora-toolbox-is-now-just-toolbox/) by Debarshi Ray
+* [Fedora Toolbox — Under the hood](https://debarshiray.wordpress.com/2019/01/21/fedora-toolbox-under-the-hood/) by Debarshi Ray
 * [Video talk -- Toolbox: using Silverblue for development](https://www.youtube.com/watch?v=BGXs0W6NRBM) by Debarshi Ray
+
+#### 2018
+* [Fedora Toolbox — Hacking on Fedora Silverblue](https://debarshiray.wordpress.com/2018/10/22/fedora-toolbox-hacking-on-fedora-silverblue/) by Debarshi Ray
 
 ## Press Information
 We are very happy to answer questions from journalists and tech writers. The toolbox logo is licensed [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and can be [downloaded here](/assets/logo/toolbx-logo.zip).
