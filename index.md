@@ -22,22 +22,22 @@ See our [detailed guide](install).
 
 ## Articles & Blog Posts
 #### 2021
-* [Logging to registries with Toolbox](https://harrymichal.undo.it/posts/2021/logging-to-registries-with-toolbox/)
-* [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/)
-* [We are now on Matrix](https://debarshiray.wordpress.com/2021/11/24/toolbx-is-now-on-matrix/)
-* [Toolbx: Redhat is hiring a software engineer](https://debarshiray.wordpress.com/2021/11/15/toolbx-red-hat-is-hiring-a-software-engineer/)
-* [Toolbox is now Toolbx](https://debarshiray.wordpress.com/2021/11/10/toolbox-is-now-toolbx/)
-* [2021 update](https://debarshiray.wordpress.com/2021/01/14/toolbox-after-a-gap-of-15-months/)
+* [Logging to registries with Toolbox](https://harrymichal.undo.it/posts/2021/logging-to-registries-with-toolbox/) by Ondřej Míchal
+* [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/) by Fedora Magazine
+* [We are now on Matrix](https://debarshiray.wordpress.com/2021/11/24/toolbx-is-now-on-matrix/) by Debarshi Ray
+* [Toolbx: Redhat is hiring a software engineer](https://debarshiray.wordpress.com/2021/11/15/toolbx-red-hat-is-hiring-a-software-engineer/) by Debarshi Ray
+* [Toolbox is now Toolbx](https://debarshiray.wordpress.com/2021/11/10/toolbox-is-now-toolbx/) by Debarshi Ray
+* [2021 update](https://debarshiray.wordpress.com/2021/01/14/toolbox-after-a-gap-of-15-months/) by Debarshi Ray
 * [Video talk -- Interactive container environment](https://www.youtube.com/watch?v=qdpg-zBvNz8) by Ondřej Míchal
 
 #### 2020
 * [Public lightweight sway developer desktop with OSTree and podman/toolbox](https://piware.de/post/2020-12-13-ostree-sway/) by Martin Pitt
-* [Toolbox Status Update](https://harrymichal.undo.it/posts/2020/toolbox-status-update-v0.0.92-v0.0.96/)
-* [A little collection of ‘How to do X with Toolbox on Fedora Silverblue’](https://harrymichal.undo.it/posts/2020/a-little-collection-of-how-to-do-x-with-toolbox-on-fedora-silverblue/)
+* [Toolbox Status Update](https://harrymichal.undo.it/posts/2020/toolbox-status-update-v0.0.92-v0.0.96/) by Ondřej Míchal
+* [A little collection of ‘How to do X with Toolbox on Fedora Silverblue’](https://harrymichal.undo.it/posts/2020/a-little-collection-of-how-to-do-x-with-toolbox-on-fedora-silverblue/) by Ondřej Míchal
 
 #### 2019
-* [Fedora Magazine -- a quick introduction to Toolbox](https://fedoramagazine.org/a-quick-introduction-to-toolbox-on-fedora/)
-* [Toolbox -- a fall 2019 update](https://debarshiray.wordpress.com/2019/11/01/toolbox-a-fall-2019-update/)
+* [A quick introduction to Toolbox](https://fedoramagazine.org/a-quick-introduction-to-toolbox-on-fedora/) by Fedora Magazine
+* [Toolbox -- a fall 2019 update](https://debarshiray.wordpress.com/2019/11/01/toolbox-a-fall-2019-update/) by Debarshi Ray
 * [Video talk -- Toolbox: using Silverblue for development](https://www.youtube.com/watch?v=BGXs0W6NRBM) by Debarshi Ray
 
 ## Press Information
