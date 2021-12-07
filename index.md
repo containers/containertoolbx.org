@@ -27,7 +27,7 @@ See our [detailed guide](install).
 * [We are now on Matrix](https://debarshiray.wordpress.com/2021/11/24/toolbx-is-now-on-matrix/) by Debarshi Ray
 * [Toolbx: Redhat is hiring a software engineer](https://debarshiray.wordpress.com/2021/11/15/toolbx-red-hat-is-hiring-a-software-engineer/) by Debarshi Ray
 * [Toolbox is now Toolbx](https://debarshiray.wordpress.com/2021/11/10/toolbox-is-now-toolbx/) by Debarshi Ray
-* [2021 update](https://debarshiray.wordpress.com/2021/01/14/toolbox-after-a-gap-of-15-months/) by Debarshi Ray
+* [Toolbox — After a gap of 15 months](https://debarshiray.wordpress.com/2021/01/14/toolbox-after-a-gap-of-15-months/) by Debarshi Ray
 * [Video talk — Interactive container environment](https://www.youtube.com/watch?v=qdpg-zBvNz8) by Ondřej Míchal
 
 #### 2020
