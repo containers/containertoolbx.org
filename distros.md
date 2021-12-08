@@ -9,21 +9,22 @@ This default can be overridden by the `--image` option in `toolbox create`, but 
 
 ## Image requirements
 
+Toolbx specifies the entry points of newly created containers in a certain way. It's best if the OCI image doesn't specify any entry point of its own to avoid interfering with the desired command line arguments. In other words, there shouldn't be any `Entrypoint` in the `podman inspect` output for the image. A wrong set of arguments will prevent `toolbox enter` from working.
+
+If the image has a parent base image that does specify an entry point, then it can be reset with this Containerfile snippet:
+```Dockerfile
+ENTRYPOINT []
+```
+
 Toolbx customizes newly created containers in a certain way. This requires certain tools and paths to be present and have certain characteristics inside the OCI image.
 
 Tools:
-* `getent(1)`
-* `id(1)`
-* `ln(1)`
-* `mkdir(1)`: for hosts where `/home` is a symbolic link to `/var/home`
+* `capsh(1)`
+* `mkdir(1)`
+* `mount(8)`
 * `passwd(1)`
-* `readlink(1)`
-* `rm(1)`
-* `rmdir(1)`: for hosts where `/home` is a symbolic link to `/var/home`
-* `sleep(1)`
 * `test(1)`
 * `touch(1)`
-* `unlink(1)`
 * `useradd(8)`
 * `usermod(8)`
 
