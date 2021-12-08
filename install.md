@@ -35,12 +35,12 @@ Toolbx requires at least Podman 1.4.0 to work, and uses the Meson build system.
 
 The following dependencies are required to build it:
 
-- meson
-- go-md2man
-- systemd
 - go
+- go-md2man
+- meson
 - ninja
 - patchelf
+- systemd
 
 The following dependencies enable various optional features:
 
