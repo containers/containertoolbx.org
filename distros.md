@@ -43,7 +43,7 @@ Toolbx enables `sudo(8)` access inside containers. The following is necessary fo
 
 * The image should allow empty passwords for `sudo(8)`. This can be achieved by either adding the `nullok` option to the `PAM(8)` configuration, or by add the `NOPASSWD` tag to the `sudoers(5)` configuration.
 
-Since Toolbx only works with OCI images that fulfill certain requirements, it will refuse images that aren't tagged with `com.github.containers.toolbox="true"` and `com.github.debarshiray.toolbox="true"` labels. These labels are meant to be used by the maintainer of the image to indicate that they have read this document and tested that the image works with Toolbx. You can use the following snippet in a Dockerfile for this: 
+Since Toolbx only works with OCI images that fulfill certain requirements, it will refuse images that aren't tagged with `com.github.containers.toolbox="true"` and `com.github.debarshiray.toolbox="true"` labels. These labels are meant to be used by the maintainer of the image to indicate that they have read this document and tested that the image works with Toolbx. You can use the following snippet in a Dockerfile for this:
 ```Dockerfile
 LABEL com.github.containers.toolbox="true"
 ```
