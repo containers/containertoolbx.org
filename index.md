@@ -18,7 +18,7 @@ The toolbx environment is based on an [OCI](https://www.opencontainers.org/) ima
 
 ## Installation & Use
 
-See our guides on [installing and getting started](install) with Toolbx & [Linux distro support](distros).
+See our guides on [installing & getting started](install) with Toolbx and [Linux distro support](distros).
 
 ## Articles & Blog Posts
 #### 2021
