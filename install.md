@@ -39,7 +39,6 @@ The following dependencies are required to build it:
 - go-md2man
 - meson
 - ninja
-- patchelf
 - systemd
 
 The following dependencies enable various optional features:
