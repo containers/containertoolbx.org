@@ -46,9 +46,9 @@ The following dependencies enable various optional features:
 
 It can be built and installed as any other typical Meson-based project:
 ```console
-[user@hostname toolbox]$ meson -Dprofile_dir=/etc/profile.d builddir
-[user@hostname toolbox]$ ninja -C builddir
-[user@hostname toolbox]$ sudo ninja -C builddir install
+[user@hostname toolbox]$ meson setup -Dprofile_dir=/etc/profile.d builddir
+[user@hostname toolbox]$ meson compile -C builddir
+[user@hostname toolbox]$ sudo meson install -C builddir
 ```
 
 Toolbx is written in Go. Consult the [src/go.mod](https://github.com/containers/toolbox/blob/main/src/go.mod) file for a full list of all the Go dependencies.
