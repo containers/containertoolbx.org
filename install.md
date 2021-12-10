@@ -11,7 +11,7 @@ Toolbx is installed by default on Fedora Silverblue. On other operating systems 
 ### Create your toolbx container:
 ```console
 [user@hostname ~]$ toolbox create
-Created container: fedora-toolbox-33
+Created container: fedora-toolbox-36
 Enter with: toolbox enter
 [user@hostname ~]$
 ```
@@ -25,7 +25,7 @@ This will create a container called `fedora-toolbox-<version-id>`.
 
 ### Remove a toolbx container:
 ```console
-[user@hostname ~]$ toolbox rm fedora-toolbox-33
+[user@hostname ~]$ toolbox rm fedora-toolbox-36
 [user@hostname ~]$
 ```
 

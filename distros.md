@@ -3,7 +3,7 @@ layout: default
 ---
 ## Distro support
 
-By default, Toolbx creates the container using an [OCI](https://www.opencontainers.org/) image called `<ID>-toolbox:<VERSION-ID>`, where `<ID>` and `<VERSION-ID>` are taken from the host's `/usr/lib/os-release`. For example, the default image on a Fedora 33 host would be `fedora-toolbox:33`.
+By default, Toolbx creates the container using an [OCI](https://www.opencontainers.org/) image called `<ID>-toolbox:<VERSION-ID>`, where `<ID>` and `<VERSION-ID>` are taken from the host's `/usr/lib/os-release`. For example, the default image on a Fedora 36 host would be `fedora-toolbox:36`.
 
 This default can be overridden by the `--image` option in `toolbox create`, but operating system distributors should provide an adequately configured default image to ensure a smooth user experience.
 
