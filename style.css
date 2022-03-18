@@ -448,3 +448,23 @@ code.highlighter-rouge {
   padding: 2px 6px;
   background-color: rgba(0,0,0, 0.07);
 }
+
+/* Buttons */
+
+.dialog-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+
+.inline-button {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 90%;
+  padding: .4rem 1rem;
+  border-radius: var(--rounded-corner);
+  background-color: rgba(0,0,0,0.05);
+  color: var(--dark5);
+}
