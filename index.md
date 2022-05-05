@@ -21,6 +21,9 @@ The toolbx environment is based on an [OCI](https://www.opencontainers.org/) ima
 See our guides on [installing & getting started](install) with Toolbx and [Linux distro support](distros).
 
 ## Articles & Blog Posts
+#### 2022
+* [Video talk — Toolbx: developing applications on OSTree based OSes](https://www.youtube.com/watch?v=HxM15UOVmyA&t=20575s) by Debarshi Ray
+
 #### 2021
 * [Logging to registries with Toolbox](https://harrymichal.undo.it/posts/2021/logging-to-registries-with-toolbox/) by Ondřej Míchal
 * [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/) by Fedora Magazine
