@@ -20,7 +20,7 @@ The toolbx environment is based on an [OCI](https://www.opencontainers.org/) ima
 
 See our guides on [installing & getting started](install) with Toolbx and [Linux distro support](distros).
 
-## Articles & Blog Posts
+## Articles, Talks & Blog Posts
 #### 2022
 * [Video talk — Toolbx: developing applications on OSTree based OSes](https://www.youtube.com/watch?v=HxM15UOVmyA&t=20575s) by Debarshi Ray
 
