@@ -22,6 +22,8 @@ See our guides on [installing & getting started](install) with Toolbx and [Linux
 
 ## Articles, Blog Posts & Presentations
 #### 2022
+* [Toolbx — bypassing the immutability of OCI containers](https://debarshiray.wordpress.com/2022/07/22/toolbx-bypassing-the-immutability-of-oci-containers/) by Debarshi Ray
+* [Video talk — Toolbx: developing on and troubleshooting emerging OSes](https://www.youtube.com/watch?v=ZTjQQvJtPZ0) by Debarshi Ray
 * [Video talk — Toolbx: developing applications on OSTree based OSes](https://www.youtube.com/watch?v=HxM15UOVmyA&t=20575s) by Debarshi Ray
 
 #### 2021
