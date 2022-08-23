@@ -28,10 +28,10 @@ See our guides on [installing & getting started](install) with Toolbx and [Linux
 
 #### 2021
 * [Logging to registries with Toolbox](https://harrymichal.undo.it/posts/2021/logging-to-registries-with-toolbox/) by Ondřej Míchal
-* [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/) by Fedora Magazine
 * [We are now on Matrix](https://debarshiray.wordpress.com/2021/11/24/toolbx-is-now-on-matrix/) by Debarshi Ray
 * [Toolbx: Red Hat is hiring a software engineer](https://debarshiray.wordpress.com/2021/11/15/toolbx-red-hat-is-hiring-a-software-engineer/) by Debarshi Ray
 * [Toolbox is now Toolbx](https://debarshiray.wordpress.com/2021/11/10/toolbox-is-now-toolbx/) by Debarshi Ray
+* [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/) by Fedora Magazine
 * [Toolbox — After a gap of 15 months](https://debarshiray.wordpress.com/2021/01/14/toolbox-after-a-gap-of-15-months/) by Debarshi Ray
 * [Video talk — Interactive container environment](https://www.youtube.com/watch?v=qdpg-zBvNz8) by Ondřej Míchal
 
