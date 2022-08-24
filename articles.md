@@ -2,6 +2,8 @@
 layout: default
 ---
 
+## Articles, Talks & Blog Posts
+
 #### 2022
 * [Video talk — Toolbx: developing applications on OSTree based OSes](https://www.youtube.com/watch?v=HxM15UOVmyA&t=20575s) by Debarshi Ray
 
