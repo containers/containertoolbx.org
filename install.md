@@ -54,3 +54,36 @@ It can be built and installed as any other typical Meson-based project:
 Toolbx is written in Go. Consult the [src/go.mod](https://github.com/containers/toolbox/blob/main/src/go.mod) file for a full list of all the Go dependencies.
 
 By default, Toolbx uses Go modules and all the required Go packages are automatically downloaded as part of the build. There's no need to worry about the Go dependencies, unless the build environment doesn't have network access or any such peculiarities.
+
+## Custom Images
+There are two different ways of creating a custom image. The first one consists on starting from scratch by creating a container file or using an existing one. In the following link, we can see an example of a [Containerfile](containerfile.md). The other possibility consists on customizing an existing image.
+
+The following steps can be followed in order to create a custom image:
+
+    1. Create a toolbox - in this case I'm using a custom image as base
+
+        ```
+        $ toolbox create -i docker.io/akdev1l/ubuntu-toolbox:22.04
+        Created container: ubuntu-toolbox-22.04
+        Enter with: toolbox enter ubuntu-toolbox-22.04
+        ```
+
+    2. Enter the toolbox and do modifications
+
+        ```
+        $ toolbox enter ubuntu-toolbox-22.04
+        ⬢$ sudo apt install -y neofetch
+        sudo: unable to resolve host toolbox: No address associated with hostname
+        ```
+
+    3. commit the changes:
+
+        ```
+        $ podman commit ubuntu-toolbox-22.04 my-custom-image
+        ```
+
+    4. You can now create new custom toolboxes by doing: 
+
+        ```
+        $ toolbox create -i my-custom-image
+        ```
