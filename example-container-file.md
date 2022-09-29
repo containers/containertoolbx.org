@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Example of a Containerfile
 
 ```

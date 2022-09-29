@@ -56,7 +56,7 @@ Toolbx is written in Go. Consult the [src/go.mod](https://github.com/containers/
 By default, Toolbx uses Go modules and all the required Go packages are automatically downloaded as part of the build. There's no need to worry about the Go dependencies, unless the build environment doesn't have network access or any such peculiarities.
 
 ## Custom Images
-There are two different ways of creating a custom image. The first one consists on starting from scratch by creating a container file or using an existing one. In the following link, we can see an example of a [Containerfile](containerfile.md). The other possibility consists on customizing an existing image.
+There are two different ways of creating a custom image. The first one consists on starting from scratch by creating a container file or using an existing one. In the following link, we can see an example of a [Containerfile](/example-container-file). The other possibility consists on customizing an existing image.
 
 The following steps can be followed in order to create a custom image:
 
