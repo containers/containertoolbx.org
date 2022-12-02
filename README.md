@@ -14,4 +14,4 @@ To run a local web server to test the site:
 bundle exec jekyll s
 ```
 
-The CI should deploy the site automatically.
+The CI should deploy the site automatically to [https://containertoolbx.org](https://containertoolbx.org).
