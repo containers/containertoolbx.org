@@ -4,9 +4,9 @@ layout: default
 # Example of a Containerfile
 
 ```
-FROM registry.fedoraproject.org/fedora:37
+FROM registry.fedoraproject.org/fedora:38
 
-ENV NAME=fedora-toolbox VERSION=37
+ENV NAME=fedora-toolbox VERSION=38
 LABEL com.github.containers.toolbox="true" \
       com.redhat.component="$NAME" \
       name="$NAME" \
