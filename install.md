@@ -39,6 +39,7 @@ The following dependencies are required to build it:
 - go-md2man
 - meson >= 0.58.0
 - ninja
+- shadow >= 4.9
 - systemd
 
 The following dependencies enable various optional features:
