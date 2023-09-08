@@ -62,30 +62,30 @@ There are two different ways of creating a custom image. The first one consists 
 
 The following steps can be followed in order to create a custom image:
 
-    1. Create a toolbox - in this case I'm using a custom image as base
+1. Create a toolbox - in this case I'm using a custom image as base
 
-        ```
-        $ toolbox create -i quay.io/toolbx/ubuntu-toolbox:22.04
-        Created container: ubuntu-toolbox-22.04
-        Enter with: toolbox enter ubuntu-toolbox-22.04
-        ```
+   ```
+   $ toolbox create -i quay.io/toolbx/ubuntu-toolbox:22.04
+   Created container: ubuntu-toolbox-22.04
+   Enter with: toolbox enter ubuntu-toolbox-22.04
+   ```
 
-    2. Enter the toolbox and do modifications
+2. Enter the toolbox and do modifications
 
-        ```
-        $ toolbox enter ubuntu-toolbox-22.04
-        ⬢$ sudo apt install -y neofetch
-        sudo: unable to resolve host toolbox: No address associated with hostname
-        ```
+   ```
+   $ toolbox enter ubuntu-toolbox-22.04
+   ⬢$ sudo apt install -y neofetch
+   sudo: unable to resolve host toolbox: No address associated with hostname
+   ```
 
-    3. commit the changes:
+3. commit the changes:
 
-        ```
-        $ podman commit ubuntu-toolbox-22.04 my-custom-image
-        ```
+   ```
+   $ podman commit ubuntu-toolbox-22.04 my-custom-image
+   ```
 
-    4. You can now create new custom toolboxes by doing: 
+4. You can now create new custom toolboxes by doing:
 
-        ```
-        $ toolbox create -i my-custom-image
-        ```
+   ```
+   $ toolbox create -i my-custom-image
+   ```
