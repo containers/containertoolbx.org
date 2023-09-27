@@ -74,8 +74,16 @@ The following steps can be followed in order to create a custom image:
 
    ```console
    $ toolbox enter ubuntu-toolbox-22.04
-   ⬢$ sudo apt install -y neofetch
-   sudo: unable to resolve host toolbox: No address associated with hostname
+   ⬢$ sudo apt update && sudo apt --yes install neofetch
+   Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+   Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+   Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [802 kB]
+   Get:4 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [169 kB]
+   Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [11.3 kB]
+   Get:6 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [884 kB]
+   …
+   …
+   …
    ```
 
 3. Exit the toolbox:
