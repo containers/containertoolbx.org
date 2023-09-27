@@ -42,7 +42,7 @@ The following dependencies are required to build it:
 - shadow >= 4.9
 - systemd
 
-The following dependencies enable various optional features:
+If the following dependencies are available when building, then various optional features are enabled:
 - bash-completion
 - fish
 
