@@ -31,9 +31,9 @@ This will create a container called `fedora-toolbox-<version-id>`.
 
 ## Dependencies and Building
 
-Toolbx requires at least Podman 1.6.4 to work, and uses the Meson build system.
+Toolbx requires at least Podman 1.6.4, and optionally at least Skopeo 1.10.0, to work.
 
-The following dependencies are required to build it:
+It uses the Meson build system and the following dependencies are required to build it:
 - clang or gcc
 - go >= 1.13
 - go-md2man
