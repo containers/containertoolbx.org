@@ -78,13 +78,19 @@ The following steps can be followed in order to create a custom image:
    sudo: unable to resolve host toolbox: No address associated with hostname
    ```
 
-3. commit the changes:
+3. Exit the toolbox:
+
+   ```console
+   ⬢$ exit
+   ```
+
+4. commit the changes:
 
    ```
    $ podman commit ubuntu-toolbox-22.04 my-custom-image
    ```
 
-4. You can now create new custom toolboxes by doing:
+5. You can now create new custom toolboxes by doing:
 
    ```
    $ toolbox create -i my-custom-image
