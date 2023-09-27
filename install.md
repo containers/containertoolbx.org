@@ -65,7 +65,7 @@ The following steps can be followed in order to create a custom image:
     1. Create a toolbox - in this case I'm using a custom image as base
 
         ```
-        $ toolbox create -i docker.io/akdev1l/ubuntu-toolbox:22.04
+        $ toolbox create -i quay.io/toolbx/ubuntu-toolbox:22.04
         Created container: ubuntu-toolbox-22.04
         Enter with: toolbox enter ubuntu-toolbox-22.04
         ```
