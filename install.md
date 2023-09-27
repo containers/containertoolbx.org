@@ -44,6 +44,7 @@ The following dependencies are required to build it:
 
 The following dependencies enable various optional features:
 - bash-completion
+- fish
 
 It can be built and installed as any other typical Meson-based project:
 ```console
