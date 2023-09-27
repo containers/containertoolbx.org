@@ -31,7 +31,7 @@ This will create a container called `fedora-toolbox-<version-id>`.
 
 ## Dependencies and Building
 
-Toolbx requires at least Podman 1.4.0 to work, and uses the Meson build system.
+Toolbx requires at least Podman 1.6.4 to work, and uses the Meson build system.
 
 The following dependencies are required to build it:
 - clang or gcc
