@@ -3,7 +3,7 @@ Toolbx website
 
 To set up jekyll locally on Fedora:
 
-1) Set up toolbox container and clone the repo
+1) Set up Toolbx container and clone the repo
 ```
 toolbox create toolbx-website --release 39
 toolbox enter toolbx-website

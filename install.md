@@ -9,7 +9,7 @@ Toolbx is installed by default on [Fedora Silverblue](https://fedoraproject.org/
 
 ## Usage
 
-### Create your toolbx container:
+### Create your Toolbx container:
 ```console
 [user@hostname ~]$ toolbox create
 Created container: fedora-toolbox-{{ page.fedora-version }}
@@ -18,13 +18,13 @@ Enter with: toolbox enter
 ```
 This will create a container called `fedora-toolbox-<version-id>`.
 
-### Enter the toolbx:
+### Enter the Toolbx:
 ```console
 [user@hostname ~]$ toolbox enter
 ⬢[user@toolbox ~]$
 ```
 
-### Remove a toolbx container:
+### Remove a Toolbx container:
 ```console
 [user@hostname ~]$ toolbox rm fedora-toolbox-{{ page.fedora-version }}
 [user@hostname ~]$
@@ -63,7 +63,7 @@ There are two different ways of creating a custom image. The first one consists 
 
 The following steps can be followed in order to create a custom image:
 
-1. Create a toolbox - in this case I'm using a custom image as base
+1. Create a Toolbx - in this case I'm using a custom image as base
 
    ```console
    $ toolbox create -i quay.io/toolbx/ubuntu-toolbox:22.04
@@ -71,7 +71,7 @@ The following steps can be followed in order to create a custom image:
    Enter with: toolbox enter ubuntu-toolbox-22.04
    ```
 
-2. Enter the toolbox and do modifications
+2. Enter the Toolbx and do modifications
 
    ```console
    $ toolbox enter ubuntu-toolbox-22.04
@@ -87,7 +87,7 @@ The following steps can be followed in order to create a custom image:
    …
    ```
 
-3. Exit the toolbox:
+3. Exit the Toolbx:
 
    ```console
    ⬢$ exit
@@ -99,7 +99,7 @@ The following steps can be followed in order to create a custom image:
    $ podman commit ubuntu-toolbox-22.04 my-custom-image
    ```
 
-5. You can now create new custom toolboxes by doing:
+5. You can now create new custom Toolbxes by doing:
 
    ```console
    $ toolbox create -i my-custom-image
