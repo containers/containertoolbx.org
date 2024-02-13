@@ -4,28 +4,23 @@ layout: default
 
 ![Toolbx](assets/toolbx.gif){:.full.pixels}
 
-[Toolbx](https://containertoolbx.org/) is a tool for Linux, which allows the use of interactive command line environments for development and troubleshooting the host operating system, without having to install software on the host. It is built on top of [Podman](https://podman.io/) and other standard container technologies from [OCI](https://opencontainers.org/).
+**Toolbx** is a tool for Linux systems, which allows the use of interactive command line environments for development and troubleshooting the host operating system, without having to install software on the host. It is built on top of [Podman](https://podman.io/) and other standard container technologies from [OCI](https://opencontainers.org/).
 
-Toolbx environments have seamless access to the user's home directory, the Wayland and X11 sockets, networking (including Avahi), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc..
+Learn more about Toolbox in the [documentation](https://github.com/containers/toolbox/blob/main/doc/toolbox.1.md).
 
-This is particularly useful on [OSTree](https://ostreedev.github.io/ostree/) based operating systems like
-[Fedora CoreOS](https://fedoraproject.org/coreos/) and [Silverblue](https://fedoraproject.org/silverblue/). The intention of these systems is to discourage installation of software on the host, and instead install software as (or in) containers — they mostly don't even have package managers like DNF or YUM. This makes it difficult to set up a development environment or troubleshoot the operating system in the usual way.
 
-Toolbx solves this problem by providing a fully mutable container within which one can install their favourite development and troubleshooting tools, editors and SDKs. For example, it's possible to do `yum install ansible` without affecting the base operating system.
-
-However, this tool doesn't *require* using an OSTree based system. It works equally well on Fedora Workstation and Server, and that's a useful way to incrementally adopt containerization.
-
-The Toolbx environment is based on an [OCI](https://www.opencontainers.org/) image. On Fedora this is the `fedora-toolbox` image. This image is used to create a Toolbx container that offers the interactive command line environment.
-
-Note that Toolbx makes no promise about security beyond what's already available in the usual command line environment on the host that everybody is familiar with.
 
 
 ## Installation & Use
 
-See our guides on [installing & getting started](install) with Toolbx and [Linux distro support](distros).
+* [Linux distro support](distros)
+* [Installation Guide](install)
+* FIXME: Convenient system integration with [Prompt]()
+* FIXME: Toolbx integration in Builder
 
-## Press Information
-We are very happy to answer questions from journalists and tech writers. The Toolbx logo is licensed [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and can be [downloaded here](/assets/logo/toolbx-logo.zip).
+## Press
+* [Articles about Toolbx](articles)
+* [Press kit](/assets/logo/toolbx-logo.zip)
 
 Press queries, including requests for comments and interviews can be directed to [press@lists.podman.io](mailto:press@lists.podman.io).
 
@@ -37,6 +32,6 @@ Toolbx is Free Software and is developed in the open. Code can be found on [GitH
   * Issues are tracked on [GitHub Issues](https://github.com/containers/toolbox/issues).
   * Security issues can be reported at a [private list](mailto:security@lists.podman.io). Here's our [security policy](https://github.com/containers/common/blob/main/SECURITY.md).
   * Contributors are bound to agree to our [Code of Conduct](https://github.com/containers/common/blob/main/CODE-OF-CONDUCT.md).
-  * Follow us on [Mastodon](https://floss.social/@containertoolbx){:rel="me"} and [Twitter](https://twitter.com/containertoolbx), or stay updated with our latest [happenings](articles).
+  * Follow us on [Mastodon/Fediverse](https://floss.social/@containertoolbx).
 
 See our [contribution guide](https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md) for further details.
