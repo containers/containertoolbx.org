@@ -2,7 +2,10 @@
 layout: default
 ---
 
-![Toolbx](assets/toolbx.gif){:.full.pixels}
+<picture class="full">
+    <source srcset="assets/toolbx-dark.gif" media="(prefers-color-scheme: dark)">
+    <img src="assets/toolbx.gif">
+</picture>
 
 **Toolbx** is a tool for Linux systems, which allows the use of interactive command line environments for development and troubleshooting the host operating system, without having to install software on the host. It is built on top of [Podman](https://podman.io/) and other standard container technologies from [OCI](https://opencontainers.org/).
 
@@ -15,7 +18,7 @@ Learn more about Toolbox in the [documentation](https://github.com/containers/to
 
 * [Linux distro support](distros)
 * [Installation Guide](install)
-* FIXME: Convenient system integration with [Prompt]()
+* FIXME: Convenient system integration with [Prompt](https://gitlab.gnome.org/chergert/prompt)
 * FIXME: Toolbx integration in Builder
 
 ## Press
