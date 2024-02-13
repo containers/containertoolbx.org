@@ -40,5 +40,3 @@ Toolbx is Free Software and is developed in the open. Code can be found on [GitH
   * Follow us on [Mastodon](https://floss.social/@containertoolbx){:rel="me"} and [Twitter](https://twitter.com/containertoolbx), or stay updated with our latest [happenings](articles).
 
 See our [contribution guide](https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md) for further details.
-
-[![Zuul](https://zuul-ci.org/gated.svg)](https://softwarefactory-project.io/zuul/t/local/builds?project=containers/toolbox) [![Daily Pipeline](https://softwarefactory-project.io/zuul/api/tenant/local/badge?project=containers/toolbox&pipeline=periodic)](https://softwarefactory-project.io/zuul/t/local/builds?project=containers%2Ftoolbox&pipeline=periodic) [![Arch Linux package](https://img.shields.io/archlinux/v/extra/x86_64/toolbox)](https://archlinux.org/packages/extra/x86_64/toolbox/) [![Fedora package](https://img.shields.io/fedora/v/toolbox/rawhide)](https://src.fedoraproject.org/rpms/toolbox/)
