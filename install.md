@@ -3,6 +3,11 @@ layout: default
 fedora-version: 39
 ---
 
+<picture class="full">
+    <source srcset="../assets/install-dark.png" media="(prefers-color-scheme: dark)">
+    <img src="../assets/install.png">
+</picture>
+
 ## Installation
 
 Toolbx is installed by default on [Fedora Silverblue](https://fedoraproject.org/silverblue/) and [Workstation](https://fedoraproject.org/workstation/). On other operating systems it's just a matter of installing the `toolbox` package.
