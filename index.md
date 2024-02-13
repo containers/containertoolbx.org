@@ -35,6 +35,6 @@ Toolbx is Free Software and is developed in the open. Code can be found on [GitH
   * Issues are tracked on [GitHub Issues](https://github.com/containers/toolbox/issues).
   * Security issues can be reported at a [private list](mailto:security@lists.podman.io). Here's our [security policy](https://github.com/containers/common/blob/main/SECURITY.md).
   * Contributors are bound to agree to our [Code of Conduct](https://github.com/containers/common/blob/main/CODE-OF-CONDUCT.md).
-  * Follow us on [Mastodon/Fediverse](https://floss.social/@containertoolbx).
+  * Follow us on [Mastodon/Fediverse](https://floss.social/@containertoolbx){:rel="me"}.
 
 See our [contribution guide](https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md) for further details.
