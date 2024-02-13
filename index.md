@@ -19,7 +19,7 @@ Learn more about Toolbox in the [documentation](https://github.com/containers/to
 * [Linux distro support](distros)
 * [Installation Guide](install)
 * FIXME: Convenient system integration with [Prompt](https://gitlab.gnome.org/chergert/prompt)
-* FIXME: Toolbx integration in Builder
+* [Toolbx integration in Builder](builder)
 
 ## Press
 * [Articles about Toolbx](articles)
