@@ -525,6 +525,7 @@ ul.bottomlinks {
     list-style: none;
   }
   
+  
   ul.bottomlinks li a {
     font-weight: 400;
     text-align: left;
@@ -532,7 +533,9 @@ ul.bottomlinks {
     text-decoration-color: rgba(255,255,255,0);
     transition: all 200ms ease-out;
   }
-   
+  
+  ul.bottomlinks li:first-child a { font-weight: 900; }
+  
    ul.bottomlinks li a:hover {
     text-decoration-color: rgba(255,255,255,1);
    }
