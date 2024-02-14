@@ -1,13 +1,13 @@
 <footer>
   <nav>
     <ul class="bottomlinks">
-      <li><a href="/">Home</a></li>
-      <li><a href="/install">Install Guide</a></li>
-      <li><a href="/distros">Distros</a></li>
-      
-      <li><a class="extlink" href="https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md">Contribution Guide {% include extlink.svg %}</a></li>
-      <li><a class="extlink" href="https://matrix.to/#/#toolbx:matrix.org">Discuss on Matrix {% include extlink.svg %}</a></li>
-      <li><a class="extlink" href="https://github.com/containers/toolbox/issues">GitHub Issues {% include extlink.svg %}</a></li>
+      {% for link in site.data.links %}
+      {% if link.url contains "http" %}
+        <li><a class="extlink" href="{{ link.url }}">{{ link.lnk }} {% include extlink.svg %}</a></li>
+      {% else %}
+        <li><a href="{{ link.url }}">{{ link.lnk }}</a></li>
+      {% endif %}
+      {% endfor %}
 
       <li><span class="socials">
         <a href="https://floss.social/@containertoolbx" class="social" rel="me">{% include mastodon.svg %}</a>
