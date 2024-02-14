@@ -162,7 +162,7 @@ img {
 /* Layout */
 .container {
   max-width: var(--pagewidth);
-  padding: var(--pagepad);
+  padding: 0 var(--pagepad) var(--pagepad);
   margin: auto;
 }
 
@@ -471,8 +471,6 @@ code.highlighter-rouge {
   background-color: rgba(0,0,0,0.05);
   color: var(--dark5);
 }
-
-
 /* FOOTER */
 footer {
   background-color: #1a1622;
@@ -505,7 +503,6 @@ ul.nav a:hover {
 
 footer a {
   text-decoration: none;
-  font-weight: 600;
   color: white;
   display: block;
   margin: auto;
@@ -525,41 +522,40 @@ ul.bottomlinks {
     list-style: none;
   }
   
+  ul.bottomlinks li:first-child a { font-weight: 900; font-variation-settings: "wght" 900; }
   
   ul.bottomlinks li a {
     font-weight: 400;
+    font-variation-settings: "wght" 600;
     text-align: left;
     text-decoration: underline;
     text-decoration-color: rgba(255,255,255,0);
     transition: all 200ms ease-out;
   }
-  
-  ul.bottomlinks li:first-child a { font-weight: 900; }
-  
    ul.bottomlinks li a:hover {
-    text-decoration-color: rgba(255,255,255,1);
+     text-decoration-color: rgba(255,255,255,1);
    }
    
-   a.social {
-      width: 32px; height: 32px;
-      margin: 0;
-   }
+  a.social {
+    width: 32px; height: 32px;
+    margin: 0;
+  }
    
-   .socials {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: baseline;
-      margin: 24px 6px 0 0;
-      gap: 6px;
-   }
-   .social { fill: rgba(255,255,255,0.6); transition: all 200ms ease-out; }
-   .social:hover { fill: rgba(255,255,255,1); transform: scale(1.1); }
-   .extlink>svg { 
-      width: 12px; 
-      height: 12px; 
-      display: inline-block;
-      fill: rgba(255,255,255,0.6); 
-      transition: all 200ms ease-out;
-    }
-    .extlink:hover>svg { fill: rgba(255,255,255,1); }
+  .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 24px 6px 0 0;
+    gap: 6px;
+  }
+  .social { fill: rgba(255,255,255,0.6); transition: all 200ms ease-out; }
+  .social:hover { fill: rgba(255,255,255,1); transform: scale(1.1); }
+  .extlink>svg { 
+    width: 12px; 
+    height: 12px; 
+    display: inline-block;
+    fill: rgba(255,255,255,0.6); 
+    transition: all 200ms ease-out;
+  }
+.extlink:hover>svg { fill: rgba(255,255,255,1); }

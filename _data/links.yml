@@ -4,6 +4,8 @@
   url: '/install'
 - lnk: 'Distros'
   url: '/distros'
+- lnk: 'IDE Integration'
+  url: '/builder'
 - lnk: 'Contribute'
   url: 'https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md'
 - lnk: 'Discuss on Matrix'
