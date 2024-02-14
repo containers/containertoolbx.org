@@ -3,7 +3,7 @@ layout: default
 fedora-version: 39
 ---
 
-<picture class="full">
+<picture class="full pixels">
     <source srcset="../assets/install-dark.png" media="(prefers-color-scheme: dark)">
     <img src="../assets/install.png">
 </picture>

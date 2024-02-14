@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<picture class="full">
+<picture class="full pixels">
     <source srcset="../assets/distros-dark.gif" media="(prefers-color-scheme: dark)">
     <img src="../assets/distros.gif">
 </picture>
