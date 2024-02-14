@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<picture class="full pixels">
+    <source srcset="../assets/news-dark.gif" media="(prefers-color-scheme: dark)">
+    <img src="../assets/news.gif">
+</picture>
+
 ## Articles, Blog Posts & Presentations
 
 If you know something that isn't listed, please [file an issue](https://github.com/containers/containertoolbx.org/issues/new) so we can add it!
