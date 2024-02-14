@@ -123,6 +123,8 @@ h2 {
   margin-top: 3rem;
   font-size: 1.2rem;
 }
+
+/* LINKS */
 a {
   font-weight: 600;
   text-decoration: none;
@@ -133,6 +135,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+a[href^="http"]:after {
+  display: inline-block;
+  margin-left: 3px;
+  content: url('/assets/extlink.svg');
+}
+
 b {
   font-weight: 600;
 }
@@ -507,6 +516,8 @@ footer a {
   display: block;
   margin: auto;
 }
+
+footer a[href^="http"]:after { content: none; }
 
 ul.bottomlinks {
   column-width: 25ex;
