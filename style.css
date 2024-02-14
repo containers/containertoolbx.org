@@ -155,6 +155,10 @@ img {
     image-rendering: pixelated; 
   }
 
+.extlink {
+  display: inline-block;
+}
+
 /* Layout */
 .container {
   width: 80%;
@@ -549,3 +553,11 @@ ul.bottomlinks {
    }
    .social { fill: rgba(255,255,255,0.6); transition: all 200ms ease-out; }
    .social:hover { fill: rgba(255,255,255,1); transform: scale(1.1); }
+   .extlink>svg { 
+      width: 12px; 
+      height: 12px; 
+      display: inline-block;
+      fill: rgba(255,255,255,0.6); 
+      transition: all 200ms ease-out;
+    }
+    .extlink:hover>svg { fill: rgba(255,255,255,1); }
