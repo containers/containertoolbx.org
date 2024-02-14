@@ -58,6 +58,21 @@
   --pagewidth: 60rem;
   --pagepad: 2rem;
   --btnround: 500px;
+  --fg-color: #241f31;
+  --bg-color: #f6f5f4;
+  --term-fg: var(--dark3);
+  --term-bg: var(--light1);
+  --term-br: 9px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --fg-color: #eee;
+    --bg-color: var(--dark0);
+    --term-fg: var(--light1);
+    --term-bg: var(--dark4);
+  }
 }
 
 * {
@@ -76,8 +91,8 @@ html, body {
 }
 
 body {
-  color: #241f31;
-  background-color: #f6f5f4;
+  color: var(--fg-color);
+  background-color: var(--bg-color);
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto minmax(auto,1fr) auto; /* header, stuff, footer */
@@ -103,21 +118,6 @@ h1 {
     font-size: 38px;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  body {
-    filter: invert(100%) hue-rotate(180deg);
-  }
-
-  html {
-    background-color: var(--dark5);
-  }
-
-  img, video, iframe {
-    filter: invert(100%) hue-rotate(180deg);
-  }
-}
-
 
 h2 {
   margin-top: 3rem;
@@ -182,6 +182,12 @@ img {
 .page-logo > img {
   margin: 0 auto;
 }
+
+  @media (prefers-color-scheme: dark) {
+    #logo {
+      background-image: url('assets/page-logo-i.svg');
+    }
+  }
 
 .brand-white {
   background-color: #fff;
