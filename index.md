@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<picture class="full">
+<picture class="full pixels">
     <source srcset="assets/toolbx-dark.gif" media="(prefers-color-scheme: dark)">
     <img src="assets/toolbx.gif">
 </picture>
