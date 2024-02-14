@@ -212,7 +212,7 @@ tbody td {
   vertical-align: top;
 }
 
-/* GitHub Code Highlighting */
+/* Github Code Highlighting */
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight .cm {
@@ -420,27 +420,34 @@ tbody td {
   color: #bbbbbb;
 }
 .highlight {
-  background-color: #f8f8f8;
 }
 
 
 /* Code Blocks */
 .highlighter-rouge {
+  font-size: 80%;
+  line-height: normal;
   padding: 2px 1rem;
-  border-radius: 5px;
-  background-color: white;
-
-  overflow: auto;
+  border-radius: var(--term-br);
+  background-color: var(--term-bg);
+  max-width: 100vw;
+  overflow-x: auto;
+  margin: 1rem 0;
 }
+  @media only screen and (max-device-width : 480px) {
+  /*mobile*/
+  .highlighter-rouge { max-width: 80vw; }
+  }
+  
 .highlighter-rouge * {
-  background-color: white;
 }
 
 /* Inline Code */
 code.highlighter-rouge {
   padding: 2px 6px;
-  background-color: rgba(0,0,0, 0.07);
+  background-color: var(--term-bg);
 }
+
 
 /* Buttons */
 
