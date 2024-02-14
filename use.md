@@ -20,10 +20,12 @@ But working with your containers isn't restricted to your commandline. [Builder]
 
 ![GNOME Shell running inside a toolbx container](../assets/builder-shell-toolbx.webp){: .full}
 
-**Say goodbye to juggling containers and terminals!** Ptyxis, the game-changing terminal emulator app, seamlessly integrates with Toolbx, making container management a breeze. Whether you're a seasoned developer or just dipping your toes into the container world, Ptyxis streamlines your workflow.
+## Ptyxis Terminal
+
+**Say goodbye to juggling containers and terminals!** [Ptyxis](https://gitlab.gnome.org/chergert/prompt), the game-changing terminal emulator app, seamlessly integrates with Toolbx, making container management a breeze. Whether you're a seasoned developer or just dipping your toes into the container world, Ptyxis streamlines your workflow.
 
 Imagine this: you fire up Ptyxis, select your desired Toolbx container, and boom – you're in! No more complex commands, configuration hassles, or context switching. Ptyxis acts as your direct portal to any container environment, giving you granular control and access to all the tools you need within a familiar terminal interface.
 
-Ptyxis takes advantage of Toolbx's flexibility, allowing you to create custom container configurations tailored to your specific needs. Need a Python development environment? Craft a container with all the necessary libraries and packages. Working on a system component test? Design a container that mirrors your production setup. The possibilities are endless, and Ptyxis empowers you to explore them all with ease.
+Ptyxis takes advantage of Toolbx's flexibility, allowing you to create custom container configurations tailored to your specific needs. Need a Python development environment? Craft a container with all the necessary libraries and packages. Working on a system component test? Design a container that mirrors your production setup. The possibilities are endless, and Ptyxis empowers you to explore them all with ease. And all those very same containers are accessible from your IDE.
 
 Forget clunky VMs, Toolbx is the container solution for developers who demand control and flexibility.
