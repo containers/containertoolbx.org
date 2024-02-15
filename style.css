@@ -561,7 +561,7 @@ ul.bottomlinks {
     gap: 6px;
   }
   .social { fill: rgba(255,255,255,0.6); transition: all 200ms ease-out; }
-  .social:hover { fill: rgba(255,255,255,1); transform: scale(1.1); }
+  .social:hover { fill: rgba(255,255,255,1); }
   .extlink>svg { 
     width: 12px; 
     height: 12px; 
