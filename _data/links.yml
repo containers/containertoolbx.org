@@ -6,6 +6,8 @@
   url: '/distros'
 - lnk: 'Common Use Cases'
   url: '/use'
+- lnk: 'News and Articles'
+  url: '/articles'
 - lnk: 'Contibuting'
   url: 'https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md'
 - lnk: 'Discuss on Matrix'
