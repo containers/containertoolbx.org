@@ -16,7 +16,7 @@ In fact, the distro in the container can be a different system. Say a 3rd party 
 ## Development
 **Building system components, not just apps?** Toolbx has you covered. Developing the system shell for GNOME used to be quite cumbersome and satisfying the dependencies a chore. The shell developers have streamlined their [workflow using toolbox](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) considerably.
 
-But working with your containers isn't restricted to your commandline. [Builder](https://flathub.org/apps/org.gnome.Builder), the integrated development environment for GNOME has integrated toolbx containers in a way that allows to develop and test applications literally at a push of a button.
+But working with your containers isn't restricted to your commandline. [Builder](https://flathub.org/apps/org.gnome.Builder), the integrated development environment for GNOME has integrated toolbx containers in a way that allows to develop and test applications literally at a push of a button. This includes running the **gnome-shell** in nested mode as it was an application. This streamlines the *develop > test > debug > submit merge request* workflow considerably.
 
 ![GNOME Shell running inside a toolbx container](../assets/builder-shell-toolbx.webp){: .full}
 
