@@ -8,6 +8,8 @@
   url: '/use'
 - lnk: 'News and Articles'
   url: '/articles'
+- lnk: 'Manual'
+  url: '/man'
 - lnk: 'Contibuting'
   url: 'https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md'
 - lnk: 'Discuss on Matrix'
