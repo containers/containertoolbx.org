@@ -16,7 +16,7 @@ No longer will project environments clash with your host machine, nor will you b
 * [Basics](https://github.com/containers/toolbox/blob/main/doc/toolbox.1.md) ­— Overview of the `toolbox` command.
 * [Creating a Toolbox](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md)
 * [Launching / Entering Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md)
-* [Running Commands in COntainers](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md)
+* [Running Commands in Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md)
 * [Help](https://github.com/containers/toolbox/blob/main/doc/toolbox-help.1.md) — Getting syntax help for the CLI tools.
 * [Init Container](https://github.com/containers/toolbox/blob/main/doc/toolbox-init-container.1.md) — Initializing running containers.
 * [Listing Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-list.1.md) — Listing existing containers and images.
