@@ -22,7 +22,7 @@ But working with your containers isn't restricted to your commandline. [Builder]
 
 ## Ptyxis Terminal
 
-**Say goodbye to juggling containers and terminals!** [Ptyxis](https://gitlab.gnome.org/chergert/prompt), the game-changing terminal emulator app, seamlessly integrates with Toolbx, making container management a breeze. Whether you're a seasoned developer or just dipping your toes into the container world, Ptyxis streamlines your workflow.
+**Say goodbye to juggling containers and terminals!** [Ptyxis](https://gitlab.gnome.org/chergert/ptyxis), the game-changing terminal emulator app, seamlessly integrates with Toolbx, making container management a breeze. Whether you're a seasoned developer or just dipping your toes into the container world, Ptyxis streamlines your workflow.
 
 ![Jekyll in a container](../assets/ptyxis.webp){: .full}
 
