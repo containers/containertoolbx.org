@@ -11,7 +11,7 @@ fedora-version: 39
 ## Desktop Apps
 **Toolbx isn't your average constrained container tool**. The place where **toolbx** containers shine is the desktop. While modern apps designed for the future are built on [Flatpak](https://flatpak.org), you might need to run an old style application that intertwined with the OS (the old school distro package). Toolbx is an ideal aid in that scenario. You can use a particular distro image and install a plentitude of packages the app might need, without affecting the host OS. 
 
-In fact, the distro in the container can be a different system. Say a 3rd party app is only available as a Debian or Ubuntu package. No problem to run it on your Fedora Silverblue!
+In fact, the distro in the container can be a different system. Say a 3rd party app is only available as a Debian or Ubuntu package. No problem to run it on your [Fedora Silverblue](https://fedoraproject.org/atomic-desktops/silverblue/)!
 
 ## Development
 **Building system components, not just apps?** Toolbx has you covered. Developing the system shell for GNOME used to be quite cumbersome and satisfying the dependencies a chore. The shell developers have streamlined their [workflow using toolbox](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) considerably.
