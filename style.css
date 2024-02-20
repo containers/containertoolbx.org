@@ -442,18 +442,14 @@ tbody td {
   padding: 2px 1rem;
   border-radius: var(--term-br);
   background-color: var(--term-bg);
-  max-width: 100vw;
+  max-width: calc(100vw - 6rem);
   overflow-x: auto;
   margin: 1rem 0;
 }
-  @media only screen and (max-device-width : 480px) {
-  /*mobile*/
-  .highlighter-rouge { max-width: 80vw; }
-  }
-  
-.highlighter-rouge * {
+ol .highlighter-rouge,
+ul .highlighter-rouge {
+  max-width: calc(100vw - 8rem);
 }
-
 /* Inline Code */
 code.highlighter-rouge {
   padding: 2px 6px;
