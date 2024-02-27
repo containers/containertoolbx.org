@@ -14,7 +14,7 @@ Welcome to the world of **toolbx**, a powerful commandline utility designed to s
 No longer will project environments clash with your host machine, nor will you be limited to a single RHEL or Fedora version. Dive into this manual and unlock the potential to seamlessly switch between versions, isolate projects, and avoid software conflicts on your host system. Prepare to embark on a journey of efficient development and testing with **toolbx** as your trusty companion.
 
 * [Basics](https://github.com/containers/toolbox/blob/main/doc/toolbox.1.md) ­— Overview of the `toolbox` command.
-* [Creating a Toolbox](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md)
+* [Creating a Toolbx](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md)
 * [Launching / Entering Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md)
 * [Running Commands in Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md)
 * [Help](https://github.com/containers/toolbox/blob/main/doc/toolbox-help.1.md) — Getting syntax help for the CLI tools.
