@@ -1,5 +1,7 @@
 - lnk: 'Toolbx Home'
   url: '/'
+- lnk: 'Project Goals'
+  url: '/goals'
 - lnk: 'Install Guide'
   url: '/install'
 - lnk: 'Distros'
