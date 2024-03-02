@@ -33,7 +33,7 @@ Welcome to the world of this powerful command line utility. No longer will proje
 * [Launching / Entering Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md)
 * [Running Commands in Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md)
 * [Help](https://github.com/containers/toolbox/blob/main/doc/toolbox-help.1.md) — Getting syntax help for the CLI tools.
-* [Listing Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-list.1.md) — Listing existing containers and images.
+* [Listing Containers & Images](https://github.com/containers/toolbox/blob/main/doc/toolbox-list.1.md)
 * [Removing Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-rm.1.md)
 * [Removing Images](https://github.com/containers/toolbox/blob/main/doc/toolbox-rmi.1.md)
 * [Toolbx Configuration](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) — Learn about the toolbx config file format.
