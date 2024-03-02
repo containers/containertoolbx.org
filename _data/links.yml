@@ -12,7 +12,7 @@
   url: '/articles'
 - lnk: 'Manual'
   url: '/manual'
-- lnk: 'Contibuting'
+- lnk: 'Contributing'
   url: 'https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md'
 - lnk: 'Discuss on Matrix'
   url: 'https://matrix.to/#/#toolbx:matrix.org'
