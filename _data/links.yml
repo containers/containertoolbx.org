@@ -4,7 +4,7 @@
   url: '/goals'
 - lnk: 'Installation & Getting Started'
   url: '/install'
-- lnk: 'Distros'
+- lnk: 'Distro Support'
   url: '/distros'
 - lnk: 'Common Use Cases'
   url: '/use'
