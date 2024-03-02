@@ -11,7 +11,7 @@
 - lnk: 'News and Articles'
   url: '/articles'
 - lnk: 'Manual'
-  url: '/man'
+  url: '/manual'
 - lnk: 'Contibuting'
   url: 'https://github.com/containers/toolbox/blob/main/CONTRIBUTING.md'
 - lnk: 'Discuss on Matrix'
