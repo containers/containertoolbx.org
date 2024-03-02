@@ -8,7 +8,7 @@
   url: '/distros'
 - lnk: 'Common Use Cases'
   url: '/use'
-- lnk: 'News and Articles'
+- lnk: 'Articles & Presentations'
   url: '/articles'
 - lnk: 'Manual'
   url: '/manual'

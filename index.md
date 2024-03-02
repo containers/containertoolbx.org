@@ -23,7 +23,7 @@ Learn more about Toolbx in the [documentation](manual).
 * [Common Use Cases](use)
 
 ## Press
-* [Articles about Toolbx](articles)
+* [Articles & Presentations](articles)
 * [Press kit](/assets/logo/toolbx-logo.zip)
 
 Press queries, including requests for comments and interviews can be directed to [press@lists.podman.io](mailto:press@lists.podman.io).
