@@ -9,7 +9,7 @@ layout: default
 
 ## Toolbx Manual
 
-Welcome to the world of **toolbx**, a powerful commandline utility designed to streamline your development and testing experience. This manual will guide you through the details of creating and managing isolated containerized environments tailored to your specific needs. 
+Welcome to the world of **toolbx**, a powerful commandline utility designed to streamline your development and testing experience. This manual will guide you through the details of creating and managing isolated containerized environments tailored to your specific needs.
 
 No longer will project environments clash with your host machine, nor will you be limited to a single RHEL or Fedora version. Dive into this manual and unlock the potential to seamlessly switch between versions, isolate projects, and avoid software conflicts on your host system. Prepare to embark on a journey of efficient development and testing with **toolbx** as your trusty companion.
 
