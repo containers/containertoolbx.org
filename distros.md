@@ -21,9 +21,9 @@ By default, Toolbx tries to use an image matching the host operating system dist
 You can specify a desired distribution when creating the container:
 
 ```
-toolbox create --distro ubuntu --release 22.04 ubuntu
+toolbox create --distro ubuntu --release 22.04
 ```
 
-Once you enter the distro environment with `toolbox enter ubuntu` you have access to all the `.deb` packages the distro provide, regardless of the host operating system you use.
+Once you enter the distro environment with `toolbox enter` you have access to all the `.deb` packages the distro provide, regardless of the host operating system you use.
 
 ![apt-get on Fedora](../assets/apt-get.png){:.full}
