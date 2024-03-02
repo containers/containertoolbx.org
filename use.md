@@ -8,6 +8,9 @@ fedora-version: 39
     <img src="../assets/builder.gif">
 </picture>
 
+* Table of Contents
+{:toc}
+
 ## Desktop Apps
 **Toolbx isn't your average constrained container tool**. The place where **toolbx** containers shine is the desktop. While modern apps designed for the future are built on [Flatpak](https://flatpak.org), you might need to run an old style application that intertwined with the OS (the old school distro package). Toolbx is an ideal aid in that scenario. You can use a particular distro image and install a plentitude of packages the app might need, without affecting the host OS. 
 
