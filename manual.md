@@ -37,4 +37,3 @@ Welcome to the world of this powerful command line utility. No longer will proje
 * [Removing Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-rm.1.md)
 * [Removing Images](https://github.com/containers/toolbox/blob/main/doc/toolbox-rmi.1.md)
 * [Toolbx Configuration](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) — Learn about the toolbx config file format.
-
