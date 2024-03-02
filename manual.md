@@ -36,4 +36,4 @@ Welcome to the world of this powerful command line utility. No longer will proje
 * [Removing Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-rm.1.md)
 * [Removing Images](https://github.com/containers/toolbox/blob/main/doc/toolbox-rmi.1.md)
 * [Configuration File](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) — The `toolbox.conf(5)` file format.
-* [Help](https://github.com/containers/toolbox/blob/main/doc/toolbox-help.1.md) — Getting syntax help for the CLI tools.
+* [Help](https://github.com/containers/toolbox/blob/main/doc/toolbox-help.1.md) — Read the manual from the CLI.
