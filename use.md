@@ -14,7 +14,7 @@ fedora-version: 39
 In fact, the distro in the container can be a different system. Say a 3rd party app is only available as a Debian or Ubuntu package. No problem to run it on your [Fedora Silverblue](https://fedoraproject.org/atomic-desktops/silverblue/)!
 
 ## Development
-**Building system components, not just apps?** Toolbx has you covered. Developing the system shell for GNOME used to be quite cumbersome and satisfying the dependencies a chore. The shell developers have streamlined their [workflow using toolbox](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) considerably.
+**Building system components, not just apps?** Toolbx has you covered. Developing the system shell for GNOME used to be quite cumbersome and satisfying the dependencies a chore. The shell developers have streamlined their [workflow using Toolbx](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) considerably.
 
 But working with your containers isn't restricted to your commandline. [Builder](https://flathub.org/apps/org.gnome.Builder), the integrated development environment for GNOME has integrated toolbx containers in a way that allows to develop and test applications literally at a push of a button. This includes running the **gnome-shell** in nested mode as it was an application. This streamlines the *develop > test > debug > submit merge request* workflow considerably.
 
