@@ -14,8 +14,6 @@ layout: default
 Learn more about Toolbx in the [documentation](man).
 
 
-
-
 ## Installation & Use
 
 * [Linux distro support](distros)
