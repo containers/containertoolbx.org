@@ -2,7 +2,7 @@
   url: '/'
 - lnk: 'Project Goals'
   url: '/goals'
-- lnk: 'Install Guide'
+- lnk: 'Installation & Getting Started'
   url: '/install'
 - lnk: 'Distros'
   url: '/distros'
