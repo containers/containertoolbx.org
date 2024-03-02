@@ -18,8 +18,8 @@ Learn more about Toolbx in the [documentation](manual).
 
 ## Installation & Use
 
-* [Linux Distro Support](distros)
 * [Installation & Getting Started](install)
+* [Distro Support](distros)
 * [Common Use Cases](use)
 
 ## Press
