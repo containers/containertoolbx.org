@@ -63,6 +63,7 @@
   --term-fg: var(--dark3);
   --term-bg: var(--light1);
   --term-br: 9px;
+  --fontsize: 12pt;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,6 +76,14 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  :root {
+    --pagepad: 1rem;
+    --fontsize: 14pt;
+  }
+}
+
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -84,7 +93,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: var(--fontsize);
   font-family: "Inter Variable", sans-serif;
   font-weight: 400;
   line-height: 1.6;
