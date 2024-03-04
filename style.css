@@ -63,6 +63,7 @@
   --term-fg: var(--dark3);
   --term-bg: var(--light1);
   --term-br: 9px;
+  --term-width: calc(100vw - 6rem);
   --fontsize: 12pt;
 }
 
@@ -76,10 +77,11 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   :root {
     --pagepad: 1rem;
     --fontsize: 14pt;
+    --term-width: calc(100vw - 3rem);
   }
 }
 
@@ -454,7 +456,7 @@ tbody td {
   padding: 2px 1rem;
   border-radius: var(--term-br);
   background-color: var(--term-bg);
-  max-width: calc(100vw - 6rem);
+  max-width: var(--term-width);
   overflow-x: auto;
   margin: 1rem 0;
 }
