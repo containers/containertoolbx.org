@@ -26,7 +26,7 @@ Forget clunky virtual machines, Toolbx is the container solution for developers 
 
 ### Command Line Tools & libraries
 
-**Toolbx** is perfect for hacking on command line tools like compilers and debuggers like [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/), container tools like [Flatpak](https://flatpak.org/) and [Podman](https://podman.io/), and libraries like [GLib](https://docs.gtk.org/glib/) and [GTK](https://gtk.org/).
+**Toolbx** is perfect for hacking on command line tools like compilers and debuggers like [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/), container tools like [Flatpak](https://flatpak.org/) and [Podman](https://podman.io/), and libraries like [GStreamer](https://gstreamer.freedesktop.org/) and [GTK](https://gtk.org/).
 
 The development environment can be set up inside the container in the same way as on the host operating system. No longer will project environments clash with the host OS, nor will it be limited to a single OS version. Testing against a different OS user space is only a matter of creating a different Toolbx container.
 
