@@ -47,9 +47,9 @@ The web applications can be developed inside Toolbx containers that closely matc
 
 ### Operating System Components
 
-Building system components, not just apps? **Toolbx** has it covered. Developing the [shell](https://gitlab.gnome.org/GNOME/gnome-shell) for GNOME used to be quite cumbersome and satisfying the dependencies a chore. The GNOME Shell developers have streamlined their [workflow using Toolbx](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) considerably.
+Building system components like [GNOME Shell](https://gitlab.gnome.org/GNOME/gnome-shell) and [PipeWire](https://pipewire.org/), not just apps? **Toolbx** has it covered.
 
-[Builder](https://flathub.org/apps/org.gnome.Builder), the IDE for GNOME, has integrated Toolbx in a way that allows running GNOME Shell in nested mode as it was an application. This streamlines the *develop > test > debug > submit merge request* workflow considerably.
+Developing GNOME Shell used to be quite cumbersome and satisfying the dependencies a chore. The Shell developers have streamlined their [workflow using Toolbx](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) considerably. [Builder](https://flathub.org/apps/org.gnome.Builder), the IDE for GNOME, has integrated Toolbx in a way that allows running GNOME Shell in nested mode as it was an application. This streamlines the *develop > test > debug > submit merge request* workflow considerably.
 
 ![GNOME Shell running inside a toolbx container](../assets/builder-shell-toolbx.webp){: .full}
 
