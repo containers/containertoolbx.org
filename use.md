@@ -40,7 +40,7 @@ The development environment can be set up inside the container in the same way a
 
 ### Web Applications
 
-Not just desktop applications. Toolbox environments can be used to develop web applications too. This website itself was created using [Toolbx](https://github.com/containers/containertoolbx.org/blob/main/README.md), and it's the recommended way to make changes to it.
+Not just desktop applications. Toolbx environments can be used to develop web applications too. This website itself was created using [Toolbx](https://github.com/containers/containertoolbx.org/blob/main/README.md), and it's the recommended way to make changes to it.
 
 The web applications can be developed inside Toolbx containers that closely match the deployment environments used in production, without being constrained by the specifics of the host operating system.
 
