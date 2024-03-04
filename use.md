@@ -51,7 +51,21 @@ Building system components like [GNOME Shell](https://gitlab.gnome.org/GNOME/gno
 
 Developing GNOME Shell used to be quite cumbersome and satisfying the dependencies a chore. The Shell developers have streamlined their [workflow using Toolbx](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) considerably. [Builder](https://flathub.org/apps/org.gnome.Builder), the IDE for GNOME, has integrated Toolbx in a way that allows running GNOME Shell in nested mode as it was an application. This streamlines the *develop > test > debug > submit merge request* workflow considerably.
 
-![GNOME Shell running inside a toolbx container](../assets/builder-shell-toolbx.webp){: .full}
+![GNOME Builder running Shell from inside a toolbx container](../assets/builder-shell-toolbx.webp){: .full}
+
+### Wayland Session
+
+Developing operating system components can require running a full [Wayland](https://wayland.freedesktop.org/) session with [systemd-logind](https://www.freedesktop.org/software/systemd/man/latest/systemd-logind.service.html) and [udev](https://www.freedesktop.org/software/systemd/man/latest/udev.html). It's possible to do that from inside a **Toolbx** container. Here's how to do that with a full GNOME session on a Fedora Silverblue host.
+
+Use `ctrl+alt+f<n>` to switch to a Linux console and log in. Then:
+```console
+[user@hostname ~]$ export XDG_CURRENT_DESKTOP=GNOME
+[user@hostname ~]$ toolbox enter
+⬢[user@toolbox ~]$ sudo dnf install flatpak gnome-backgrounds gnome-shell
+⬢[user@toolbox ~]$ dbus-run-session gnome-shell --wayland
+```
+
+![Full GNOME session running from inside a Toolbx container](../assets/gnome-full-session.png){: .full}
 
 
 ## Troubleshooting
