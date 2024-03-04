@@ -26,7 +26,9 @@ Note that Toolbx makes no promise about security beyond what's already available
 
 ## Manual
 
-Welcome to the world of this powerful command line utility. No longer will project environments clash with your host operating system, nor will you be limited to a single Arch Linux or Fedora or Ubuntu version. Dive into this manual and unlock the potential to seamlessly switch between versions, isolate projects, and avoid software conflicts on your host system. Prepare to embark on a journey of efficient development and testing with **Toolbx** as your trusty companion.
+Welcome to the world of this powerful command line utility. No longer will project environments clash with your host operating system, nor will you be limited to a single OS version.
+
+Dive into this manual and unlock the potential to seamlessly switch between versions, isolate projects, and avoid software conflicts on your host system. Prepare to embark on a journey of efficient development and testing with **Toolbx** as your trusty companion.
 
 * [Basics](https://github.com/containers/toolbox/blob/main/doc/toolbox.1.md) ­— Overview of the `toolbox(1)` command.
 * [Creating Toolbx Containers](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md)
