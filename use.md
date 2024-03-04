@@ -19,12 +19,12 @@ This is particularly useful on [OSTree](https://ostreedev.github.io/ostree/) bas
 
 ## Development
 
-One of the primary goals of Toolbx is to help with software development, and it tries to cater to a wide range of development use cases. The `toolbox enter` command is designed to be used both standalone, and as the default shell in a terminal emulation application, if so desired.
+One of the primary goals of Toolbx is to help with software development, and it tries to cater to a wide range of use cases. The `toolbox enter` command is designed to be used both standalone, and as the default shell in a terminal emulation application, if so desired.
 
 Forget clunky virtual machines, Toolbx is the container solution for developers who demand control and flexibility.
 
 
-### Command Line Tools and libraries
+### Command Line Tools & libraries
 
 **Toolbx** is perfect for hacking on command line tools like compilers and debuggers like [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/), container tools like [Flatpak](https://flatpak.org/) and [Podman](https://podman.io/), and libraries like [GLib](https://docs.gtk.org/glib/) and [GTK](https://gtk.org/).
 
