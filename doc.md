@@ -1,5 +1,7 @@
 ---
 layout: default
+fedora-version: 39
+ubuntu-version: 22.04
 ---
 
 <picture class="full pixels">
@@ -44,48 +46,77 @@ Dive into this manual and unlock the potential to seamlessly switch between vers
 
 ## Custom Images
 
-There are two different ways of creating a custom image. The first one consists on starting from scratch by creating a container file or using an existing one. In the following link, we can see an example of a [Containerfile](/example-container-file). The other possibility consists on customizing an existing image.
+**Toolbx** has built-in support for images corresponding to different operating system [distributions](/distros). It's also possible to create custom Toolbx images, and use them with the `distro` [command line](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md) and [configuration](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) file options.
 
-The following steps can be followed in order to create a custom image:
+### From a Containerfile
 
-1. Create a Toolbx - in this case I'm using a custom image as base
+One way of creating a custom Toolbx image is to define its contents in a [Containerfile](https://github.com/containers/common/blob/main/docs/Containerfile.5.md) and then use `podman build --squash` to build the image.
 
-   ```console
-   $ toolbox create -i quay.io/toolbx/ubuntu-toolbox:22.04
-   Created container: ubuntu-toolbox-22.04
-   Enter with: toolbox enter ubuntu-toolbox-22.04
-   ```
+The easiest option is to base the custom image on one of the built-in images.
 
-2. Enter the Toolbx and do modifications
+Here's a Containerfile for a custom image that adds [Emacs](https://www.gnu.org/software/emacs/), [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/) to the built-in `fedora-toolbox:{{ page.fedora-version }}` image available from `registry.fedoraproject.org`.
 
-   ```console
-   $ toolbox enter ubuntu-toolbox-22.04
-   ⬢$ sudo apt update && sudo apt --yes install neofetch
-   Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
-   Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
-   Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [802 kB]
-   Get:4 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [169 kB]
-   Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [11.3 kB]
-   Get:6 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [884 kB]
-   …
-   …
-   …
-   ```
+```Containerfile
+FROM registry.fedoraproject.org/fedora-toolbox:{{ page.fedora-version }}
 
-3. Exit the Toolbx:
+ARG NAME=my-fedora-toolbox
+ARG VERSION={{ page.fedora-version }}
+LABEL com.github.containers.toolbox="true" \
+      name="$NAME" \
+      version="$VERSION" \
+      usage="This image is meant to be used with the toolbox(1) command" \
+      summary="Image for creating Fedora Toolbx containers"
 
-   ```console
-   ⬢$ exit
-   ```
+RUN dnf --assumeyes install emacs gdb gcc
+RUN dnf clean all
+```
 
-4. commit the changes:
+It's also possible to start from any OCI image, as long as the `com.github.containers.toolbox="true"` label is mentioned in the Containerfile.
 
-   ```console
-   $ podman commit ubuntu-toolbox-22.04 my-custom-image
-   ```
+The Containerfile can then be built to create a `my-fedora-toolbox:{{ page.fedora-version }}` image:
+```console
+[user@hostname ~]$ podman build \
+                     --squash \
+                     --tag localhost/my-fedora-toolbox:{{ page.fedora-version }} \
+                     /path/to/Containerfile/dir
+```
 
-5. You can now create new custom Toolbxes by doing:
+### From a Container
 
-   ```console
-   $ toolbox create -i my-custom-image
-   ```
+Another possibility is to create a custom Toolbx image from an existing Toolbx container by using `podman commit --squash`.
+
+Here's how to create a custom image similar to the one above, but based on a Toolbx container created from the built-in `ubuntu-toolbox:{{ page.ubuntu-version }}` image available from `quay.io/toolbx`.
+
+Create the Toolbx container:
+```console
+[user@hostname ~]$ toolbox create --distro ubuntu --release {{ page.ubuntu-version }}
+Created container: ubuntu-toolbox-{{ page.ubuntu-version }}
+Enter with: toolbox enter ubuntu-toolbox-{{ page.ubuntu-version }}
+```
+
+Alter it by installing Emacs, GCC and GDB:
+```console
+[user@hostname ~]$ toolbox enter ubuntu-toolbox-{{ page.ubuntu-version }}
+⬢[user@toolbox ~]$ sudo apt update
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1208 kB]
+…
+…
+…
+⬢[user@toolbox ~]$ sudo apt --yes install emacs gcc gdb
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+…
+…
+…
+⬢[user@toolbox ~]$ exit
+```
+
+A `my-ubuntu-toolbox:{{ page.ubuntu-version }}` image can then be created from the altered container:
+```console
+[user@hostname ~]$ podman commit \
+                     ubuntu-toolbox-{{ page.ubuntu-version }} \
+                     localhost/my-ubuntu-toolbox:{{ page.ubuntu-version }}
+```
