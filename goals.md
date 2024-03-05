@@ -21,7 +21,7 @@ layout: default
 
   - Packages for the `toolbox(1)` command.
 
-Examples of use cases that fit these goals can be found [ here](/use).
+Examples of use cases that fit these goals can be found [here](/use).
 
 ## Non-goals
 
