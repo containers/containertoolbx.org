@@ -13,7 +13,11 @@ layout: default
 
 - Decouple development environments and troubleshooting tools from the host OS.
 
-- Reduce the cognitive overhead of using [OCI](https://opencontainers.org/) containers. One shouldn't have to debug why the SSH agent or graphical apps aren’t working.
+- Fit for use as a default command line shell.
+
+  - Reduce the cognitive overhead of using [OCI](https://opencontainers.org/) containers.
+
+  - One shouldn't have to debug why the SSH agent or graphical apps aren’t working.
 
 - Support for multiple [distributions](/distros):
 
