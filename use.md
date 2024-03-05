@@ -69,6 +69,45 @@ Use `ctrl+alt+f<n>` to switch to a Linux console and log in. Then:
 
 ![Full GNOME session running from inside a Toolbx container](../assets/gnome-full-session.png){: .full}
 
+### Boot from Container
+
+Not just that — it's possible to boot from a **Toolbx** container. Here's how Fedora Silverblue can be booted from a Toolbx container.
+
+Create a Toolbx container from the [OCI](https://opencontainers.org/) variant of the Fedora Silverblue image:
+```console
+[user@hostname ~]$ toolbox create \
+                     --image quay.io/fedora-ostree-desktops/silverblue:39 \
+                     silverblue-toolbox-39
+```
+
+Alter it by installing DNF as an example:
+```console
+[user@hostname ~]$ toolbox enter silverblue-toolbox-39
+⬢[user@toolbox ~]$ sudo rpm-ostree install dnf
+⬢[user@toolbox ~]$ exit
+```
+
+Create an OCI image from the altered Toolbx container:
+```console
+[user@hostname ~]$ podman commit \
+                     silverblue-toolbox-39 \
+                     localhost/silverblue-toolbox:39
+```
+
+Expose it to [rpm-ostree](https://coreos.github.io/rpm-ostree/):
+```console
+[user@hostname ~]$ mkdir /var/tmp/silverblue-toolbox-39-00
+[user@hostname ~]$ podman save \
+                     --format oci-dir \
+                     --output /var/tmp/silverblue-toolbox-39-00 \
+                     localhost/silverblue-toolbox:39
+[user@hostname ~]$ rpm-ostree rebase \
+                     ostree-unverified-image:oci:/var/tmp/silverblue-toolbox-39-00
+```
+
+Reboot.
+
+![Fedora Silverblue booted from a Toolbx container](../assets/fedora-silverblue-boot-from.png){: .full}
 
 ## Troubleshooting
 
