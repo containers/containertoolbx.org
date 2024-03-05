@@ -37,6 +37,8 @@ The development environment can be set up inside the container in the same way a
 
 [Builder](https://flathub.org/apps/org.gnome.Builder), the IDE for GNOME, has integrated Toolbx in a way that allows developing and testing desktop applications literally at the push of a button. The application is built, run and tested against the development tools and software development kits installed inside a specific Toolbx container.
 
+![GNOME Builder building GNOME Maps against a Toolbx container](../assets/builder-desktop-app.png){: .full}
+
 
 ### Web Applications
 
