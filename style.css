@@ -74,6 +74,7 @@
     --bg-color: var(--dark0);
     --term-fg: var(--light1);
     --term-bg: var(--dark4);
+    --primary-color: var(--purple2);
   }
 }
 
