@@ -24,7 +24,7 @@ One of the primary goals of Toolbx is to help with software development, and it 
 Forget clunky virtual machines, Toolbx is the container solution for developers who demand control and flexibility.
 
 
-### Command Line Tools & libraries
+### Command Line Tools & Libraries
 
 **Toolbx** is perfect for hacking on command line tools like compilers and debuggers like [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/), container tools like [Flatpak](https://flatpak.org/) and [Podman](https://podman.io/), and libraries like [GStreamer](https://gstreamer.freedesktop.org/) and [GTK](https://gtk.org/).
 
