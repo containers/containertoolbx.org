@@ -55,6 +55,7 @@ Developing GNOME Shell used to be quite cumbersome and satisfying the dependenci
 
 ![GNOME Builder running Shell from inside a Toolbx container](../assets/builder-shell-toolbx.webp){: .full}
 
+
 ### Wayland Session
 
 Developing operating system components can require running a full [Wayland](https://wayland.freedesktop.org/) session with [systemd-logind](https://www.freedesktop.org/software/systemd/man/latest/systemd-logind.service.html) and [udev](https://www.freedesktop.org/software/systemd/man/latest/udev.html). It's possible to do that from inside a **Toolbx** container.
@@ -70,6 +71,7 @@ Use `ctrl+alt+f<n>` to switch to a Linux console and log in. Then:
 ```
 
 ![Full GNOME session running from inside a Toolbx container](../assets/gnome-full-session.png){: .full}
+
 
 ### Boot from Container
 
@@ -110,6 +112,7 @@ Expose it to [rpm-ostree](https://coreos.github.io/rpm-ostree/):
 Reboot.
 
 ![Fedora Silverblue booted from a Toolbx container](../assets/fedora-silverblue-boot-from.png){: .full}
+
 
 ## Troubleshooting
 
