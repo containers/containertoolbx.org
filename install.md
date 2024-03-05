@@ -10,7 +10,7 @@ fedora-version: 39
 
 ## Installation
 
-Toolbx is installed by default on [Fedora Silverblue](https://fedoraproject.org/silverblue/) and [Workstation](https://fedoraproject.org/workstation/). On other operating systems it's just a matter of installing the `toolbox` package.
+Toolbx is installed by default on [Fedora Silverblue](https://fedoraproject.org/silverblue/) and [Workstation](https://fedoraproject.org/workstation/). On other operating systems it's a matter of installing the `toolbox` or `podman-toolbox` package.
 
 ## Usage
 
