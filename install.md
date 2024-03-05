@@ -21,7 +21,7 @@ Created container: fedora-toolbox-{{ page.fedora-version }}
 Enter with: toolbox enter
 [user@hostname ~]$
 ```
-This will create a container called `fedora-toolbox-<version-id>`.
+On a Fedora {{ page.fedora-version }} host, this will create a container called `fedora-toolbox-{{ page.fedora-version }}`. On an Arch Linux host, it will create one called `arch-linux-latest`, and so on.
 
 ### Enter the Toolbx:
 ```console
