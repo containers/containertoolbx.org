@@ -13,7 +13,7 @@ layout: default
 
 Toolbx environments have seamless access to the user's home directory, the Wayland and X11 sockets, networking (including Avahi), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc..
 
-Learn more about Toolbx in the [documentation](manual).
+Learn more about Toolbx in the [documentation](doc).
 
 
 ## Installation & Use
