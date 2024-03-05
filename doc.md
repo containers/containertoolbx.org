@@ -41,3 +41,51 @@ Dive into this manual and unlock the potential to seamlessly switch between vers
 * [Removing Images](https://github.com/containers/toolbox/blob/main/doc/toolbox-rmi.1.md)
 * [Configuration File](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) — The `toolbox.conf(5)` file format.
 * [Help](https://github.com/containers/toolbox/blob/main/doc/toolbox-help.1.md) — Read the manual from the CLI.
+
+## Custom Images
+
+There are two different ways of creating a custom image. The first one consists on starting from scratch by creating a container file or using an existing one. In the following link, we can see an example of a [Containerfile](/example-container-file). The other possibility consists on customizing an existing image.
+
+The following steps can be followed in order to create a custom image:
+
+1. Create a Toolbx - in this case I'm using a custom image as base
+
+   ```console
+   $ toolbox create -i quay.io/toolbx/ubuntu-toolbox:22.04
+   Created container: ubuntu-toolbox-22.04
+   Enter with: toolbox enter ubuntu-toolbox-22.04
+   ```
+
+2. Enter the Toolbx and do modifications
+
+   ```console
+   $ toolbox enter ubuntu-toolbox-22.04
+   ⬢$ sudo apt update && sudo apt --yes install neofetch
+   Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+   Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+   Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [802 kB]
+   Get:4 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [169 kB]
+   Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [11.3 kB]
+   Get:6 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [884 kB]
+   …
+   …
+   …
+   ```
+
+3. Exit the Toolbx:
+
+   ```console
+   ⬢$ exit
+   ```
+
+4. commit the changes:
+
+   ```console
+   $ podman commit ubuntu-toolbox-22.04 my-custom-image
+   ```
+
+5. You can now create new custom Toolbxes by doing:
+
+   ```console
+   $ toolbox create -i my-custom-image
+   ```
