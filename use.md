@@ -80,13 +80,13 @@ Not just that — it's possible to boot from a **Toolbx** container. Here's how 
 Create a Toolbx container from the [OCI](https://opencontainers.org/) variant of the Fedora Silverblue image:
 ```console
 [user@hostname ~]$ toolbox create \
-                     --image quay.io/fedora-ostree-desktops/silverblue:39 \
-                     silverblue-toolbox-39
+                     --image quay.io/fedora-ostree-desktops/silverblue:{{ page.fedora-version }} \
+                     silverblue-toolbox-{{ page.fedora-version }}
 ```
 
 Alter it by installing DNF as an example:
 ```console
-[user@hostname ~]$ toolbox enter silverblue-toolbox-39
+[user@hostname ~]$ toolbox enter silverblue-toolbox-{{ page.fedora-version }}
 ⬢[user@toolbox ~]$ sudo rpm-ostree install dnf
 ⬢[user@toolbox ~]$ exit
 ```
@@ -94,19 +94,19 @@ Alter it by installing DNF as an example:
 Create an OCI image from the altered Toolbx container:
 ```console
 [user@hostname ~]$ podman commit \
-                     silverblue-toolbox-39 \
-                     localhost/silverblue-toolbox:39
+                     silverblue-toolbox-{{ page.fedora-version }} \
+                     localhost/silverblue-toolbox:{{ page.fedora-version }}
 ```
 
 Expose it to [rpm-ostree](https://coreos.github.io/rpm-ostree/):
 ```console
-[user@hostname ~]$ mkdir /var/tmp/silverblue-toolbox-39-00
+[user@hostname ~]$ mkdir /var/tmp/silverblue-toolbox-{{ page.fedora-version }}-00
 [user@hostname ~]$ podman save \
                      --format oci-dir \
-                     --output /var/tmp/silverblue-toolbox-39-00 \
-                     localhost/silverblue-toolbox:39
+                     --output /var/tmp/silverblue-toolbox-{{ page.fedora-version }}-00 \
+                     localhost/silverblue-toolbox:{{ page.fedora-version }}
 [user@hostname ~]$ rpm-ostree rebase \
-                     ostree-unverified-image:oci:/var/tmp/silverblue-toolbox-39-00
+                     ostree-unverified-image:oci:/var/tmp/silverblue-toolbox-{{ page.fedora-version }}-00
 ```
 
 Reboot.
