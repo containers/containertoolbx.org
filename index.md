@@ -21,6 +21,7 @@ Learn more about Toolbx in the [documentation](manual).
 * [Installation & Getting Started](install)
 * [Distro Support](distros)
 * [Common Use Cases](use)
+* [Project Goals](goals)
 
 ## Press
 * [Articles & Presentations](articles)
