@@ -115,7 +115,7 @@ Similarly, **Toolbx** can be used to look at the logs for all processes running 
 
 ![Jekyll in a container](../assets/ptyxis.webp){: .full}
 
-Imagine this: you fire up Ptyxis, select your desired Toolbx container, and boom – you're in! No more configuration hassles or context switching. Ptyxis acts as your direct portal to any container environment, giving you granular control and access to all the tools you need within a familiar terminal interface.
+Imagine this: you fire up Ptyxis, select your desired Toolbx container, and boom — you're in! No more configuration hassles or context switching. Ptyxis acts as your direct portal to any container environment, giving you granular control and access to all the tools you need within a familiar terminal interface.
 
 Ptyxis takes advantage of Toolbx's flexibility, allowing you to create custom container configurations tailored to your specific needs. Need a Python development environment? Craft a container with all the necessary libraries and packages. Working on a system component test? Design a container that mirrors your production setup. The possibilities are endless, and Ptyxis empowers you to explore them all with ease. And all those very same containers are accessible from your IDE.
 
