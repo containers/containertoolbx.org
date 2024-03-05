@@ -55,7 +55,9 @@ Developing GNOME Shell used to be quite cumbersome and satisfying the dependenci
 
 ### Wayland Session
 
-Developing operating system components can require running a full [Wayland](https://wayland.freedesktop.org/) session with [systemd-logind](https://www.freedesktop.org/software/systemd/man/latest/systemd-logind.service.html) and [udev](https://www.freedesktop.org/software/systemd/man/latest/udev.html). It's possible to do that from inside a **Toolbx** container. Here's how to do that with a full GNOME session on a Fedora Silverblue host.
+Developing operating system components can require running a full [Wayland](https://wayland.freedesktop.org/) session with [systemd-logind](https://www.freedesktop.org/software/systemd/man/latest/systemd-logind.service.html) and [udev](https://www.freedesktop.org/software/systemd/man/latest/udev.html). It's possible to do that from inside a **Toolbx** container.
+
+Here's how a full GNOME session can be run from inside a Toolbx container on a Fedora Silverblue host.
 
 Use `ctrl+alt+f<n>` to switch to a Linux console and log in. Then:
 ```console
