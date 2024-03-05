@@ -56,7 +56,7 @@ The easiest option is to base the custom image on one of the built-in images.
 
 Here's a Containerfile for a custom image that adds [Emacs](https://www.gnu.org/software/emacs/), [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/) to the built-in `fedora-toolbox:{{ page.fedora-version }}` image available from `registry.fedoraproject.org`.
 
-```Containerfile
+```conf
 FROM registry.fedoraproject.org/fedora-toolbox:{{ page.fedora-version }}
 
 ARG NAME=my-fedora-toolbox
