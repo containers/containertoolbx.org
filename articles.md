@@ -45,7 +45,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [Public lightweight sway developer desktop with OSTree and podman/toolbox](https://piware.de/post/2020-12-13-ostree-sway/) by Martin Pitt
 * [Toolbox Status Update](https://harrymichal.undo.it/posts/2020/toolbox-status-update-v0.0.92-v0.0.96/) by Ondřej Míchal
 * [A little collection of ‘How to do X with Toolbox on Fedora Silverblue’](https://harrymichal.undo.it/posts/2020/a-little-collection-of-how-to-do-x-with-toolbox-on-fedora-silverblue/) by Ondřej Míchal
-* [A quick guide to podman and toolbox in Debian (and maybe Ubuntu)](https://dev.to/bureado/a-quick-guide-to-podman-and-toolbox-in-debian-5672) by José Miguel Parrella
+* [A quick guide to podman and toolbox in Debian (and maybe Ubuntu)](https://dev.to/bureado/a-quick-guide-to-podman-and-toolbox-in-debian-5672) by José Miguel Parrella, DEV
 
 #### 2019
 * [A quick introduction to Toolbox](https://fedoramagazine.org/a-quick-introduction-to-toolbox-on-fedora/) by Ryan Walter, Fedora Magazine
