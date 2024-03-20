@@ -36,7 +36,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [Logging to registries with Toolbox](https://harrymichal.undo.it/posts/2021/logging-to-registries-with-toolbox/) by Ondřej Míchal
 * [We are now on Matrix](https://debarshiray.wordpress.com/2021/11/24/toolbx-is-now-on-matrix/) by Debarshi Ray
 * [Toolbox is now Toolbx](https://debarshiray.wordpress.com/2021/11/10/toolbox-is-now-toolbx/) by Debarshi Ray
-* [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/) by Fedora Magazine
+* [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/) by Christian Fredrik Schaller, Fedora Magazine
 * [Toolbox your Debian](https://blogs.gnome.org/alatiera/2021/03/03/toolbox-your-debian/) by Jordan Petridis
 * [Toolbox — After a gap of 15 months](https://debarshiray.wordpress.com/2021/01/14/toolbox-after-a-gap-of-15-months/) by Debarshi Ray
 * [Video talk — Interactive container environment](https://www.youtube.com/watch?v=qdpg-zBvNz8) by Ondřej Míchal
@@ -48,7 +48,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [A quick guide to podman and toolbox in Debian (and maybe Ubuntu)](https://dev.to/bureado/a-quick-guide-to-podman-and-toolbox-in-debian-5672) by José Miguel Parrella
 
 #### 2019
-* [A quick introduction to Toolbox](https://fedoramagazine.org/a-quick-introduction-to-toolbox-on-fedora/) by Fedora Magazine
+* [A quick introduction to Toolbox](https://fedoramagazine.org/a-quick-introduction-to-toolbox-on-fedora/) by Ryan Walter, Fedora Magazine
 * [Toolbox — A fall 2019 update](https://debarshiray.wordpress.com/2019/11/01/toolbox-a-fall-2019-update/) by Debarshi Ray
 * [Fedora Toolbox is now just Toolbox](https://debarshiray.wordpress.com/2019/04/03/fedora-toolbox-is-now-just-toolbox/) by Debarshi Ray
 * [Fedora Toolbox — Under the hood](https://debarshiray.wordpress.com/2019/01/21/fedora-toolbox-under-the-hood/) by Debarshi Ray
