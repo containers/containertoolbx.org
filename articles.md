@@ -13,6 +13,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 
 #### 2024
 
+* [An alternative way of saving toolboxes](https://fedoramagazine.org/alternative-way-of-saving-toolboxes-for-later-use/) by Liviu Vasut, Fedora Magazine
 * [Toolbx is a release blocker for Fedora 39 onwards](https://debarshiray.wordpress.com/2024/03/01/toolbx-is-a-release-blocker-for-fedora-39-onwards/) by Debarshi Ray
 * [Booting into Toolbox Containers](https://blog.sebastianwick.net/posts/booting-into-toolbox-containers/) by Sebastian Wick
 * [Toolbx now offers built-in support for Arch Linux and Ubuntu](https://debarshiray.wordpress.com/2024/01/20/toolbx-now-offers-built-in-support-for-arch-linux-and-ubuntu/) by Debarshi Ray
@@ -44,6 +45,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 #### 2020
 * [Public lightweight sway developer desktop with OSTree and podman/toolbox](https://piware.de/post/2020-12-13-ostree-sway/) by Martin Pitt
 * [Toolbox Status Update](https://harrymichal.undo.it/posts/2020/toolbox-status-update-v0.0.92-v0.0.96/) by Ondřej Míchal
+* [Backup and restore Toolboxes](https://fedoramagazine.org/backup-and-restore-toolboxes-with-podman/) by Joe Fidler, Fedora Magazine
 * [A little collection of ‘How to do X with Toolbox on Fedora Silverblue’](https://harrymichal.undo.it/posts/2020/a-little-collection-of-how-to-do-x-with-toolbox-on-fedora-silverblue/) by Ondřej Míchal
 * [A quick guide to podman and toolbox in Debian (and maybe Ubuntu)](https://dev.to/bureado/a-quick-guide-to-podman-and-toolbox-in-debian-5672) by José Miguel Parrella, DEV
 
