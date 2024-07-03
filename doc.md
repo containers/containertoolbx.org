@@ -46,7 +46,7 @@ Dive into this manual and unlock the potential to seamlessly switch between vers
 
 ## Custom Images
 
-**Toolbx** has built-in support for images corresponding to different operating system [distributions](/distros). It's also possible to create custom Toolbx images, and use them with the `distro` [command line](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md) and [configuration](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) file options.
+**Toolbx** has built-in support for images corresponding to different operating system [distributions](/distros). It's also possible to create custom Toolbx images, and use them with the `image` [command line](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md) and [configuration](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) file options.
 
 ### From a Containerfile
 
