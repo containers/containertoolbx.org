@@ -3,8 +3,8 @@ layout: default
 ---
 
 <picture class="full pixels">
-    <source srcset="../assets/goals-dark.gif" media="(prefers-color-scheme: dark)">
-    <img src="../assets/goals.gif">
+    <source srcset="./assets/goals-dark.gif" media="(prefers-color-scheme: dark)">
+    <img src="./assets/goals.gif">
 </picture>
 
 ## Goals
