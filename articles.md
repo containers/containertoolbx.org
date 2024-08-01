@@ -13,6 +13,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 
 #### 2024
 
+* [Introducing Toolbx](https://developers.redhat.com/articles/2024/07/16/introducing-toolbx) by Debarshi Ray & Sumantro Mukherjee, Red Hat Developer Blog
 * [Toolbx now enables the proprietary NVIDIA driver](https://debarshiray.wordpress.com/2024/06/17/toolbx-now-enables-the-proprietary-nvidia-driver/) by Debarshi Ray
 * [An alternative way of saving toolboxes](https://fedoramagazine.org/alternative-way-of-saving-toolboxes-for-later-use/) by Liviu Vasut, Fedora Magazine
 * [Toolbx is a release blocker for Fedora 39 onwards](https://debarshiray.wordpress.com/2024/03/01/toolbx-is-a-release-blocker-for-fedora-39-onwards/) by Debarshi Ray
