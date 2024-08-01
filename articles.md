@@ -19,6 +19,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [Toolbx is a release blocker for Fedora 39 onwards](https://debarshiray.wordpress.com/2024/03/01/toolbx-is-a-release-blocker-for-fedora-39-onwards/) by Debarshi Ray
 * [Booting into Toolbox Containers](https://blog.sebastianwick.net/posts/booting-into-toolbox-containers/) by Sebastian Wick
 * [Toolbx now offers built-in support for Arch Linux and Ubuntu](https://debarshiray.wordpress.com/2024/01/20/toolbx-now-offers-built-in-support-for-arch-linux-and-ubuntu/) by Debarshi Ray
+* [Video talk —  Toolbx: recent updates](https://www.youtube.com/watch?v=tM0HNGgY9Fs) by Debarshi Ray
 
 #### 2023
 
