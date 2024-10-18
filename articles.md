@@ -44,7 +44,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [Toolbx, a developer's new best friend!](https://fedoramagazine.org/toolbx-a-developers-new-best-friend/) by Christian Fredrik Schaller, Fedora Magazine
 * [Toolbox your Debian](https://blogs.gnome.org/alatiera/2021/03/03/toolbox-your-debian/) by Jordan Petridis
 * [Toolbox — After a gap of 15 months](https://debarshiray.wordpress.com/2021/01/14/toolbox-after-a-gap-of-15-months/) by Debarshi Ray
-* [Video talk — Interactive container environment](https://www.youtube.com/watch?v=qdpg-zBvNz8) by Ondřej Míchal
+* [Video talk — Interactive container environment](https://www.youtube.com/watch?v=qdpg-zBvNz8) by Ondřej Míchal, DevConf.CZ
 
 #### 2020
 * [Public lightweight sway developer desktop with OSTree and podman/toolbox](https://piware.de/post/2020-12-13-ostree-sway/) by Martin Pitt
