@@ -13,6 +13,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 
 #### 2024
 
+* [Debugging image mode hosts](https://www.redhat.com/en/blog/debugging-image-mode-hosts) by Valentin Rothberg et al., Red Hat Blog
 * [Introducing Toolbx](https://developers.redhat.com/articles/2024/07/16/introducing-toolbx) by Debarshi Ray & Sumantro Mukherjee, Red Hat Developer Blog
 * [Toolbx now enables the proprietary NVIDIA driver](https://debarshiray.wordpress.com/2024/06/17/toolbx-now-enables-the-proprietary-nvidia-driver/) by Debarshi Ray
 * [An alternative way of saving toolboxes](https://fedoramagazine.org/alternative-way-of-saving-toolboxes-for-later-use/) by Liviu Vasut, Fedora Magazine
