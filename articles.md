@@ -20,7 +20,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [Toolbx is a release blocker for Fedora 39 onwards](https://debarshiray.wordpress.com/2024/03/01/toolbx-is-a-release-blocker-for-fedora-39-onwards/) by Debarshi Ray
 * [Booting into Toolbox Containers](https://blog.sebastianwick.net/posts/booting-into-toolbox-containers/) by Sebastian Wick
 * [Toolbx now offers built-in support for Arch Linux and Ubuntu](https://debarshiray.wordpress.com/2024/01/20/toolbx-now-offers-built-in-support-for-arch-linux-and-ubuntu/) by Debarshi Ray
-* [Video talk —  Toolbx: recent updates](https://www.youtube.com/watch?v=tM0HNGgY9Fs) by Debarshi Ray
+* [Video talk —  Toolbx: recent updates](https://www.youtube.com/watch?v=tM0HNGgY9Fs) by Debarshi Ray, DevConf.CZ
 
 #### 2023
 
@@ -28,14 +28,14 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [Fedora meets RHEL: upgrading UBI to RHEL](https://debarshiray.wordpress.com/2023/08/25/fedora-meets-rhel-upgrading-ubi-to-rhel/) by Debarshi Ray
 * [Developing Gnome Shell on Fedora Silverblue](https://blog.sebastianwick.net/posts/silverblue-gnome-shell-development/) by Sebastian Wick
 * [Developing in GNOME OS: systemd-sysext](https://blogs.gnome.org/alatiera/2023/08/04/developing-gnome-os-systemd-sysext/) by Jordan Petridis
-* [Video talk —  Toolbx: developing GNOME on OSTree based OSes](https://www.youtube.com/watch?v=Pd4XSi4zrPs&t=16250s) by Debarshi Ray
+* [Video talk —  Toolbx: developing GNOME on OSTree based OSes](https://www.youtube.com/watch?v=Pd4XSi4zrPs&t=16250s) by Debarshi Ray, GUADEC
 
 #### 2022
 * [Toolbx — running the same host binary on Arch Linux, Fedora, Ubuntu, etc. containers](https://debarshiray.wordpress.com/2022/10/02/toolbx-running-the-same-binary-on-arch-linux-fedora-ubuntu-etc-containers/) by Debarshi Ray
 * [Toolbx — bypassing the immutability of OCI containers](https://debarshiray.wordpress.com/2022/07/22/toolbx-bypassing-the-immutability-of-oci-containers/) by Debarshi Ray
 * [How to use Go Toolset container images](https://developers.redhat.com/articles/2022/07/21/how-use-go-toolset-container-images) by Alejandro Sáez Morollón, Red Hat Developer Blog
-* [Video talk — Toolbx: developing on and troubleshooting emerging OSes](https://www.youtube.com/watch?v=ZTjQQvJtPZ0) by Debarshi Ray
-* [Video talk — Toolbx: developing applications on OSTree based OSes](https://www.youtube.com/watch?v=HxM15UOVmyA&t=20575s) by Debarshi Ray
+* [Video talk — Toolbx: developing on and troubleshooting emerging OSes](https://www.youtube.com/watch?v=ZTjQQvJtPZ0) by Debarshi Ray, Community Central
+* [Video talk — Toolbx: developing applications on OSTree based OSes](https://www.youtube.com/watch?v=HxM15UOVmyA&t=20575s) by Debarshi Ray, Linux App Summit
 
 #### 2021
 * [Logging to registries with Toolbox](https://harrymichal.undo.it/posts/2021/logging-to-registries-with-toolbox/) by Ondřej Míchal
@@ -58,7 +58,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [Toolbox — A fall 2019 update](https://debarshiray.wordpress.com/2019/11/01/toolbox-a-fall-2019-update/) by Debarshi Ray
 * [Fedora Toolbox is now just Toolbox](https://debarshiray.wordpress.com/2019/04/03/fedora-toolbox-is-now-just-toolbox/) by Debarshi Ray
 * [Fedora Toolbox — Under the hood](https://debarshiray.wordpress.com/2019/01/21/fedora-toolbox-under-the-hood/) by Debarshi Ray
-* [Video talk — Toolbox: using Silverblue for development](https://www.youtube.com/watch?v=BGXs0W6NRBM) by Debarshi Ray
+* [Video talk — Toolbox: using Silverblue for development](https://www.youtube.com/watch?v=BGXs0W6NRBM) by Debarshi Ray, Flock
 
 #### 2018
 * [Fedora Toolbox — Hacking on Fedora Silverblue](https://debarshiray.wordpress.com/2018/10/22/fedora-toolbox-hacking-on-fedora-silverblue/) by Debarshi Ray
