@@ -1,6 +1,6 @@
 ---
 layout: default
-fedora-version: 40
+fedora-version: 41
 ---
 
 <picture class="full pixels">
