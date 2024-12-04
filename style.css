@@ -1,7 +1,8 @@
 ---
 ---
-/* shamelessy steal systemd concept and stylesheet 
-   https://github.com/systemd/systemd/tree/main/docs
+/* 
+  Built on top of the os-component-website template
+  https://github.com/jimmac/os-component-website
 */
 
 {% include fonts.css %}
