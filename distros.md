@@ -26,12 +26,17 @@ toolbox create --distro ubuntu --release 22.04
 
 Supported combinations are:
 
+|-------+-------------------------------------------|
 |Distro |Release                                    |
 |-------|-------------------------------------------|
 |arch   |latest or rolling                          |
+|-------+-------------------------------------------|
 |fedora |\<release\> or f\<release\> eg., 36 or f36 |
+|-------+-------------------------------------------|
 |rhel   |\<major\>.\<minor\> eg., 8.5               |
+|-------+-------------------------------------------|
 |ubuntu |\<YY\>.\<MM\> eg., 22.04                   |
+|-------+-------------------------------------------|
 
 Once you enter the distro environment with `toolbox enter` you have access to all the `.deb` packages the distro provide, regardless of the host operating system you use.
 
