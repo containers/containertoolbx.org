@@ -73,6 +73,7 @@
     color-scheme: dark;
     --fg-color: #eee;
     --bg-color: var(--dark0);
+    --borders: var(--dark3);
     --term-fg: var(--light1);
     --term-bg: var(--dark4);
     --primary-color: var(--purple2);
@@ -235,6 +236,41 @@ img {
   content: " ➜";
 }
 
+
+/* tables */
+
+table {
+  width: 100%;
+  font-size: 90%;
+  box-shadow: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 0;
+  text-align: left;
+  border-width: 0;
+  box-sizing: border-box;
+}
+  /* reset crazy */
+  table th, table tr, table td {
+    background-color: transparent;
+    text-align: left;
+  }
+
+  table td, table th {
+    border-width: 0;
+    padding: .25rem;
+  }
+  table tr {
+    border-width: 0;
+    border-bottom: 1px solid var(--borders);
+  }
+
+  table thead tr {
+    font-weight: 800;
+    border-width: 0;
+    box-sizing: inherit;
+    border-bottom: 2px solid var(--borders);
+  }
 
 /* Make tables vertically aligned to the top */
 tbody td {
