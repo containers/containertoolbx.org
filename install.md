@@ -41,7 +41,7 @@ Toolbx requires at least Podman 1.6.4, and optionally at least Skopeo 1.10.0, to
 
 It uses the Meson build system and the following dependencies are required to build it:
 - clang or gcc
-- go >= 1.20
+- go >= 1.22
 - go-md2man
 - meson >= 0.58.0
 - ninja
