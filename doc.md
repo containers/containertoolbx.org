@@ -1,6 +1,6 @@
 ---
 layout: default
-fedora-version: 39
+fedora-version: 42
 ubuntu-version: 22.04
 ---
 
