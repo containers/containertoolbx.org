@@ -16,7 +16,7 @@ Toolbx is regularly tested on the following host operating systems:
 * **Red Hat Enterprise Linux >= 8.5**
 * **Ubuntu**
 
-By default, Toolbx tries to use an image matching the host operating system distribution for creating containers. If there is no image matching the host, it falls back to a Fedora image.
+By default, Toolbx tries to use an image matching the host operating system distribution for creating containers. If there is no image matching the host, it falls back to a Fedora image. Currently, there are images available for the OSes listed above.
 
 It's possible to create containers for a different distribution through the use of the `--distro` and `--release` options, or their counterparts in the [configuration file](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md). The `--distro` flag specifies the name of the distribution, and `--release` specifies its version.  For example:
 
