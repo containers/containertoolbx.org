@@ -44,6 +44,16 @@ Dive into this manual and unlock the potential to seamlessly switch between vers
 * [Configuration File](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) — The `toolbox.conf(5)` file format.
 * [Help](https://github.com/containers/toolbox/blob/main/doc/toolbox-help.1.md) — Read the manual from the CLI.
 
+## Container Configuration
+
+Toolbx environments have seamless access to the user's home directory, the Wayland and X11 sockets, networking (including Avahi and CA certificates), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc.. The host file system can be accessed at `/run/host`.
+
+The user ID and account details from the host operating system are propagated into the Toolbx containers, SELinux label separation is disabled, and the containers have access to the host's Kerberos credentials cache if it's configured to use KCM caches. Crucial configuration files, such as `/etc/host.conf`, `/etc/hosts`, `/etc/localtime`, `/etc/machine-id`, `/etc/resolv.conf` and `/etc/timezone`, inside the containers are kept synchronized with the host.
+
+Toolbx containers can be identified by the `com.github.containers.toolbox` label with various Podman commands (like [inspect](https://docs.podman.io/en/latest/markdown/podman-inspect.1.html)) or by the presence of the `/run/.toolboxenv` file. The `/run/.containerenv` file contains some metadata about the containers.
+
+The entry point of the containers is the [toolbox init-container](https://github.com/containers/toolbox/blob/main/doc/toolbox-init-container.1.md) command. It plays a role in setting up the container and mitigating the immutable nature of the configuration of [OCI](https://www.opencontainers.org/) containers.
+
 ## Custom Images
 
 **Toolbx** has built-in support for images corresponding to different operating system [distributions](/distros). It's also possible to create custom Toolbx images, and use them with the `image` [command line](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md) and [configuration file](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) options.
