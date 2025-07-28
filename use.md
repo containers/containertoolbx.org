@@ -26,7 +26,7 @@ One of the primary goals of Toolbx is to help with software development, and it 
 
 **Toolbx** is perfect for hacking on command line tools like compilers and debuggers like [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/), container tools like [Flatpak](https://flatpak.org/) and [Podman](https://podman.io/), and libraries like [GStreamer](https://gstreamer.freedesktop.org/) and [GTK](https://gtk.org/).
 
-The development environment can be set up inside the container in the same way as on the host operating system. No longer will project environments clash with the host OS, nor will it be limited to a single OS version. Testing against a different OS user space is only a matter of creating a different Toolbx container.
+The development environments can be set up inside Toolbx containers in the same way as on the host operating system. No longer will project environments clash with the host OS, nor will they be limited to a single OS version. Testing against different OS user spaces is only a matter of creating different containers.
 
 
 ### Desktop Applications
