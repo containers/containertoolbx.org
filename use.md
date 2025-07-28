@@ -8,7 +8,7 @@ fedora-version: 42
     <img src="../assets/builder.gif">
 </picture>
 
-**Toolbx** isn't your average constrained container tool. It really shines as an interactive command line environment that can be used just like the usual Linux CLI on the host operating system that everybody is familiar with. Toolbx environments have seamless access to the user's home directory, the Wayland and X11 sockets, networking (including Avahi), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc..
+**Toolbx** isn't your average constrained container tool. It really shines as an interactive command line environment that can be used just like the usual Linux CLI on the host operating system that everybody is familiar with. Toolbx environments have seamless access to the user's home directory, the Wayland and X11 sockets, networking (including Avahi and CA certificates), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc..
 
 This is particularly useful on [OSTree](https://ostreedev.github.io/ostree/) based operating systems like [Fedora CoreOS](https://fedoraproject.org/coreos/) and [Silverblue](https://fedoraproject.org/silverblue/), but also has benefits on classical package based OSes like Fedora Workstation and Server. The `toolbox enter` command is designed to be used both standalone, and as the default shell in a terminal emulation application, if so desired.
 
