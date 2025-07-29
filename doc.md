@@ -63,7 +63,7 @@ The entry point of the containers is the [toolbox init-container](https://github
 
 **Toolbx** has built-in support for images corresponding to different operating system [distributions](/distros). It's also possible to create custom Toolbx images, and use them with the `image` [command line](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md) and [configuration file](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) options.
 
-All Toolbx images should satisfy the requirements listed below.
+All Toolbx images need to satisfy the requirements listed below.
 
 ### From a Containerfile
 
@@ -130,15 +130,17 @@ A `my-ubuntu-toolbox:{{ page.ubuntu-version }}` image can then be created from t
 
 Toolbx environments are very specifically configured OCI containers. Therefore, the OCI images from which these containers are created need to satisfy some requirements.
 
+The key words "MUST", "MUST NOT", and "SHOULD" are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
+
 #### Name
 
-Images should be uniquely named so that they don't collide with those created by others, and their names should reflect their purpose. For example, `ubuntu-toolbox` is a better name than `toolbox` because the `ubuntu-` prefix uniquely identifies it and states its purpose.
+Images SHOULD be uniquely named so that they don't collide with those created by others, and their names should reflect their purpose. For example, `ubuntu-toolbox` is a better name than `toolbox` because the `ubuntu-` prefix uniquely identifies it and states its purpose.
 
 By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{ page.fedora-version }}` images will be `fedora-toolbox-{{ page.fedora-version }}`.
 
 #### Entry Point
 
-Images shouldn't specify any entry point. This can be checked with:
+Images MUST NOT specify any entry point. This can be checked with:
 ```console
 [user@hostname ~]$ podman inspect \
                      --format '{{ .Config.Entrypoint }}' \
@@ -156,7 +158,7 @@ Toolbx specifies the entry points of containers in a certain way. If images spec
 
 #### Label
 
-Images that fulfill the above requirements should have the `com.github.containers.toolbox="true"` label.
+Images that fulfill the above requirements MUST have the `com.github.containers.toolbox="true"` label to be fully recognized by Toolbx.
 
 This can be achieved through a Containerfile:
 ```conf
