@@ -63,11 +63,11 @@ The entry point of the containers is the [toolbox init-container](https://github
 
 **Toolbx** has built-in support for images corresponding to different operating system [distributions](/distros). It's also possible to create custom Toolbx images, and use them with the `image` [command line](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md) and [configuration file](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) options.
 
+All Toolbx images should satisfy the requirements listed below.
+
 ### From a Containerfile
 
-One way of creating a custom Toolbx image is to define its contents in a [Containerfile](https://github.com/containers/common/blob/main/docs/Containerfile.5.md) and then use `podman build --squash` to build the image.
-
-The easiest option is to base the custom image on one of the built-in images.
+One way of creating a custom Toolbx image is to define its contents in a [Containerfile](https://github.com/containers/common/blob/main/docs/Containerfile.5.md) and then use `podman build --squash` to build the image. The easiest is to base the custom image on one of the built-in images, instead of any OCI image or starting from scratch.
 
 Here's a Containerfile for a custom image that adds [Emacs](https://www.gnu.org/software/emacs/), [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/) to the built-in `fedora-toolbox:{{ page.fedora-version }}` image available from `registry.fedoraproject.org`.
 
@@ -98,7 +98,7 @@ The Containerfile can then be built to create a `my-fedora-toolbox:{{ page.fedor
 
 ### From a Container
 
-Another possibility is to create a custom Toolbx image from an existing Toolbx container by using `podman commit --squash`.
+Another possibility is to create a custom Toolbx image from an existing container by using `podman commit --squash`. The easiest is to use a Toolbx container, instead of any OCI container.
 
 Here's how to create a custom image similar to the one above, but based on a Toolbx container created from the built-in `ubuntu-toolbox:{{ page.ubuntu-version }}` image available from `quay.io/toolbx`.
 
@@ -136,3 +136,49 @@ A `my-ubuntu-toolbox:{{ page.ubuntu-version }}` image can then be created from t
                      ubuntu-toolbox-{{ page.ubuntu-version }} \
                      localhost/my-ubuntu-toolbox:{{ page.ubuntu-version }}
 ```
+
+### Requirements
+
+Toolbx environments are very specifically configured OCI containers. Therefore, the OCI images from which these containers are created need to satisfy some requirements.
+
+#### Name
+
+Images should be uniquely named so that they don't collide with those created by others, and their names should reflect their purpose. For example, `ubuntu-toolbox` is a better name than `toolbox` because the `ubuntu-` prefix uniquely identifies it and states its purpose.
+
+By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{ page.fedora-version }}` images will be `fedora-toolbox-{{ page.fedora-version }}`.
+
+#### Entry Point
+
+Images shouldn't specify any entry point. This can be checked with:
+```console
+[user@hostname ~]$ podman inspect \
+                     --format '{{ .Config.Entrypoint }}' \
+                     --type image \
+                     quay.io/toolbx/arch-toolbox:latest
+[]
+```
+
+Images created from base images with entry points can remove them through a Containerfile:
+```conf
+ENTRYPOINT []
+```
+
+Toolbx specifies the entry points of containers in a certain way. If images specify their own entry points then it will prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
+
+#### Label
+
+Images that fulfill the above requirements should have the `com.github.containers.toolbox="true"` label.
+
+This can be achieved through a Containerfile:
+```conf
+LABEL com.github.containers.toolbox="true"
+```
+
+... or `podman commit`:
+```console
+[user@hostname ~]$ podman commit \
+                     --change 'LABEL com.github.containers.toolbox="true"' \
+                     …
+```
+
+The label is meant to be used by maintainers of images to indicate that they have read this document and tested that their images work with Toolbx.
