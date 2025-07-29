@@ -86,8 +86,6 @@ RUN dnf --assumeyes install emacs gdb gcc
 RUN dnf clean all
 ```
 
-It's also possible to start from any OCI image, as long as the `com.github.containers.toolbox="true"` label is mentioned in the Containerfile.
-
 The Containerfile can then be built to create a `my-fedora-toolbox:{{ page.fedora-version }}` image:
 ```console
 [user@hostname ~]$ podman build \
