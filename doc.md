@@ -159,12 +159,12 @@ Toolbx specifies the entry points of containers in a certain way. If images spec
 #### Content
 
 Images MUST have these commands:
-* capsh(1)
-* mount(8)
-* passwd(1)
-* test(1)
-* useradd(8)
-* usermod(8)
+* `capsh(1)`
+* `mount(8)`
+* `passwd(1)`
+* `test(1)`
+* `useradd(8)`
+* `usermod(8)`
 
 Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
