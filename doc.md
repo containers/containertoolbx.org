@@ -73,15 +73,6 @@ Here's a Containerfile for a custom image that adds [Emacs](https://www.gnu.org/
 
 ```conf
 FROM registry.fedoraproject.org/fedora-toolbox:{{ page.fedora-version }}
-
-ARG NAME=my-fedora-toolbox
-ARG VERSION={{ page.fedora-version }}
-LABEL com.github.containers.toolbox="true" \
-      name="$NAME" \
-      version="$VERSION" \
-      usage="This image is meant to be used with the toolbox(1) command" \
-      summary="Image for creating Fedora Toolbx containers"
-
 RUN dnf --assumeyes install emacs gdb gcc
 RUN dnf clean all
 ```
