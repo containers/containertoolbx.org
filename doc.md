@@ -132,6 +132,7 @@ Reading state information... Done
 A `my-ubuntu-toolbox:{{ page.ubuntu-version }}` image can then be created from the altered container:
 ```console
 [user@hostname ~]$ podman commit \
+                     --squash \
                      ubuntu-toolbox-{{ page.ubuntu-version }} \
                      localhost/my-ubuntu-toolbox:{{ page.ubuntu-version }}
 ```

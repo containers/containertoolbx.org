@@ -92,6 +92,7 @@ Alter it by installing DNF as an example:
 Create an OCI image from the altered Toolbx container:
 ```console
 [user@hostname ~]$ podman commit \
+                     --squash \
                      silverblue-toolbox-{{ page.fedora-version }} \
                      localhost/silverblue-toolbox:{{ page.fedora-version }}
 ```
