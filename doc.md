@@ -28,6 +28,9 @@ Note that Toolbx makes no promise about security beyond what's already available
 
 Examples of use cases that fit this description can be found [here](/use).
 
+* Table of Contents
+{:toc}
+
 ## Manual
 
 Welcome to the world of this powerful command line utility. No longer will project environments clash with your host operating system, nor will you be limited to a single OS version.
