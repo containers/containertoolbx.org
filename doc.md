@@ -48,6 +48,8 @@ Dive into this manual and unlock the potential to seamlessly switch between vers
 
 Toolbx environments have seamless access to the user's home directory, the Wayland and X11 sockets, networking (including Avahi and CA certificates), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc.. The host file system can be accessed at `/run/host`.
 
+Note that Toolbx makes no promise about security beyond what's already available in the usual command line environment on the host that everybody is familiar with.
+
 The user ID and account details from the host operating system are propagated into the Toolbx containers, SELinux label separation is disabled, and the containers have access to the host's Kerberos credentials cache if it's configured to use KCM caches. Crucial configuration files, such as `/etc/host.conf`, `/etc/hosts`, `/etc/localtime`, `/etc/machine-id`, `/etc/resolv.conf` and `/etc/timezone`, inside the containers are kept synchronized with the host.
 
 Toolbx containers can be identified by the `com.github.containers.toolbox` label with various Podman commands (like [inspect](https://docs.podman.io/en/latest/markdown/podman-inspect.1.html)) or by the presence of the `/run/.toolboxenv` file. The `/run/.containerenv` file contains some metadata about the containers.
