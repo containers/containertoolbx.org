@@ -171,6 +171,15 @@ Images MUST have these commands to be used on host operating systems with the pr
 
 Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
+Toolbx expects the following paths to have the specified attributes:
+* `/etc/host.conf`: If present, MUST be a regular file.
+* `/etc/hosts`: If present, MUST be a regular file.
+* `/etc/krb5.conf.d`: If present, MUST be a directory where the containers' `root` user can create a regular file.
+* `/etc/localtime`: If present, MUST be a regular file.
+* `/etc/machine-id`: If present, MUST be a regular file.
+* `/etc/resolv.conf`: If present, MUST be a regular file.
+* `/etc/timezone`: If present, MUST be a regular file.
+
 #### Label
 
 Images that fulfill the above requirements MUST have the `com.github.containers.toolbox="true"` label to be fully recognized by Toolbx.
