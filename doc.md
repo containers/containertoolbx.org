@@ -166,7 +166,7 @@ Images MUST have these commands:
 * `useradd(8)`
 * `usermod(8)`
 
-Images that might be used on host operating systems with the proprietary NVIDIA driver MUST have:
+Images MUST have these commands to be used on host operating systems with the proprietary NVIDIA driver:
 * `ldconfig(8)`
 
 Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
