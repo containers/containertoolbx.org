@@ -180,7 +180,7 @@ This can be achieved through a Containerfile:
 LABEL com.github.containers.toolbox="true"
 ```
 
-... or `podman commit`:
+… or `podman commit`:
 ```console
 [user@hostname ~]$ podman commit \
                      --change 'LABEL com.github.containers.toolbox="true"' \
