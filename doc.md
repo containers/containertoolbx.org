@@ -227,6 +227,20 @@ Toolbx expects the following paths to have the specified attributes:
 * `/etc/resolv.conf`: If present, MUST be a regular file.
 * `/etc/timezone`: If present, MUST be a regular file.
 
+#### PKCS #11
+
+Images SHOULD use the `/etc/pkcs11/modules` directory to configure [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) modules. If the directory is present then it MUST be possible for the containers' `root` user to create a regular file.
+
+Images SHOULD have the [p11-kit-client.so](https://p11-glue.github.io/p11-glue/p11-kit/manual/p11-kit.html) PKCS #11 module at one of these paths:
+* `/usr/lib/pkcs11/p11-kit-client.so`
+* `/usr/lib/aarch64-linux-gnu/pkcs11/p11-kit-client.so`
+* `/usr/lib/x86_64-linux-gnu/pkcs11/p11-kit-client.so`
+* `/usr/lib64/pkcs11/p11-kit-client.so`
+
+Otherwise, certificates from certificate authorities (or CAs) that are available inside containers created from those images won't be kept synchronized with the host operating system.
+
+File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different path is needed.
+
 #### sudo(8)
 
 Images MUST have `sudo(8)` enabled for users belonging to either the `sudo` or `wheel` groups, and the group itself MUST exist.
