@@ -196,6 +196,12 @@ By default, Toolbx containers are named after their corresponding images. If the
 
 #### Paths
 
+Images SHOULD contain the following start-up snippets for [Bash](https://www.gnu.org/software/bash/), [C shell](https://en.wikipedia.org/wiki/C_shell) and [Z shell](https://www.zsh.org/):
+* `/etc/profile.d/vte.csh`
+* `/etc/profile.d/vte.sh`
+
+Otherwise, [VTE](https://gitlab.gnome.org/GNOME/vte)-based terminal emulators will lack some features like remembering the current working directory.
+
 Toolbx expects the following paths to have the specified attributes:
 * `/etc/host.conf`: If present, MUST be a regular file.
 * `/etc/hosts`: If present, MUST be a regular file.
