@@ -199,3 +199,11 @@ LABEL com.github.containers.toolbox="true"
 ```
 
 The label is meant to be used by maintainers of images to indicate that they have read this document and tested that their images work with Toolbx.
+
+#### sudo(8)
+
+Images MUST have `sudo(8)` enabled for users belonging to either the `sudo` or `wheel` groups, and the group itself MUST exist.
+
+Otherwise, it will prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working. File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different group is really needed.  However it's preferable to keep this list as short as possible.
+
+Images SHOULD allow empty passwords for `sudo(8)`. This can be achieved by either adding the `nullok` option to the `PAM(8)` configuration, or by adding the `NOPASSWD` tag to the `sudoers(5)` configuration.
