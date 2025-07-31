@@ -147,6 +147,11 @@ Images MUST have these commands to be used on host operating systems with the pr
 
 Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
+Images SHOULD have these commands:
+* `flatpak-spawn(1)`
+
+Otherwise, it won't be possible to use `toolbox(1)` inside containers created from those images.
+
 #### Entry Point
 
 Images MUST NOT specify any entry point. This can be checked with:
