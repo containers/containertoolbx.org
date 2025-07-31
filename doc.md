@@ -143,7 +143,7 @@ By default, Toolbx containers are named after their corresponding images. If the
 Images MUST NOT specify any entry point. This can be checked with:
 ```console
 [user@hostname ~]$ podman inspect \
-                     --format '{{ .Config.Entrypoint }}' \
+                     --format {% raw %}'{{ .Config.Entrypoint }}'{% endraw %} \
                      --type image \
                      quay.io/toolbx/arch-toolbox:latest
 []
