@@ -132,11 +132,20 @@ Toolbx environments are very specifically configured OCI containers. Therefore, 
 
 The key words "MUST", "MUST NOT", and "SHOULD" are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
-#### Name
+#### Commands
 
-Images SHOULD be uniquely named so that they don't collide with those created by others, and their names should reflect their purpose. For example, `ubuntu-toolbox` is a better name than `toolbox` because the `ubuntu-` prefix uniquely identifies it and states its purpose.
+Images MUST have these commands:
+* `capsh(1)`
+* `mount(8)`
+* `passwd(1)`
+* `test(1)`
+* `useradd(8)`
+* `usermod(8)`
 
-By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{ page.fedora-version }}` images will be `fedora-toolbox-{{ page.fedora-version }}`.
+Images MUST have these commands to be used on host operating systems with the proprietary NVIDIA driver:
+* `ldconfig(8)`
+
+Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
 #### Entry Point
 
@@ -156,35 +165,9 @@ ENTRYPOINT []
 
 Toolbx specifies the entry points of containers in a certain way. If images specify their own entry points then it will prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
-#### Commands
-
-Images MUST have these commands:
-* `capsh(1)`
-* `mount(8)`
-* `passwd(1)`
-* `test(1)`
-* `useradd(8)`
-* `usermod(8)`
-
-Images MUST have these commands to be used on host operating systems with the proprietary NVIDIA driver:
-* `ldconfig(8)`
-
-Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
-
-#### Paths
-
-Toolbx expects the following paths to have the specified attributes:
-* `/etc/host.conf`: If present, MUST be a regular file.
-* `/etc/hosts`: If present, MUST be a regular file.
-* `/etc/krb5.conf.d`: If present, MUST be a directory where the containers' `root` user can create a regular file.
-* `/etc/localtime`: If present, MUST be a regular file.
-* `/etc/machine-id`: If present, MUST be a regular file.
-* `/etc/resolv.conf`: If present, MUST be a regular file.
-* `/etc/timezone`: If present, MUST be a regular file.
-
 #### Label
 
-Images that fulfill the above requirements MUST have the `com.github.containers.toolbox="true"` label to be fully recognized by Toolbx.
+Images that fulfill these requirements MUST have the `com.github.containers.toolbox="true"` label to be fully recognized by Toolbx.
 
 This can be achieved through a Containerfile:
 ```conf
@@ -199,6 +182,23 @@ LABEL com.github.containers.toolbox="true"
 ```
 
 The label is meant to be used by maintainers of images to indicate that they have read this document and tested that their images work with Toolbx.
+
+#### Name
+
+Images SHOULD be uniquely named so that they don't collide with those created by others, and their names should reflect their purpose. For example, `ubuntu-toolbox` is a better name than `toolbox` because the `ubuntu-` prefix uniquely identifies it and states its purpose.
+
+By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{ page.fedora-version }}` images will be `fedora-toolbox-{{ page.fedora-version }}`.
+
+#### Paths
+
+Toolbx expects the following paths to have the specified attributes:
+* `/etc/host.conf`: If present, MUST be a regular file.
+* `/etc/hosts`: If present, MUST be a regular file.
+* `/etc/krb5.conf.d`: If present, MUST be a directory where the containers' `root` user can create a regular file.
+* `/etc/localtime`: If present, MUST be a regular file.
+* `/etc/machine-id`: If present, MUST be a regular file.
+* `/etc/resolv.conf`: If present, MUST be a regular file.
+* `/etc/timezone`: If present, MUST be a regular file.
 
 #### sudo(8)
 
