@@ -156,7 +156,7 @@ ENTRYPOINT []
 
 Toolbx specifies the entry points of containers in a certain way. If images specify their own entry points then it will prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
-#### Content
+#### Commands
 
 Images MUST have these commands:
 * `capsh(1)`
@@ -170,6 +170,8 @@ Images MUST have these commands to be used on host operating systems with the pr
 * `ldconfig(8)`
 
 Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
+
+#### Paths
 
 Toolbx expects the following paths to have the specified attributes:
 * `/etc/host.conf`: If present, MUST be a regular file.
