@@ -212,12 +212,6 @@ hosts:  files mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] myhostna
 
 #### Paths
 
-Images SHOULD contain the following start-up snippets for [Bash](https://www.gnu.org/software/bash/), [C shell](https://en.wikipedia.org/wiki/C_shell) and [Z shell](https://www.zsh.org/):
-* `/etc/profile.d/vte.csh`
-* `/etc/profile.d/vte.sh`
-
-Otherwise, [VTE](https://gitlab.gnome.org/GNOME/vte)-based terminal emulators will lack some features like remembering the current working directory.
-
 Toolbx expects the following paths to have the specified attributes:
 * `/etc/host.conf`: If present, MUST be a regular file.
 * `/etc/hosts`: If present, MUST be a regular file.
@@ -240,6 +234,14 @@ Images SHOULD have the [p11-kit-client.so](https://p11-glue.github.io/p11-glue/p
 Otherwise, certificates from certificate authorities (or CAs) that are available inside containers created from those images won't be kept synchronized with the host operating system.
 
 File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different path is needed.
+
+#### Shells & Terminals
+
+Images SHOULD contain the following start-up snippets for [Bash](https://www.gnu.org/software/bash/), [C shell](https://en.wikipedia.org/wiki/C_shell) and [Z shell](https://www.zsh.org/):
+* `/etc/profile.d/vte.csh`
+* `/etc/profile.d/vte.sh`
+
+Otherwise, [VTE](https://gitlab.gnome.org/GNOME/vte)-based terminal emulators will lack some features like remembering the current working directory.
 
 #### sudo(8)
 
