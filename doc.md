@@ -194,6 +194,22 @@ Images SHOULD be uniquely named so that they don't collide with those created by
 
 By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{ page.fedora-version }}` images will be `fedora-toolbox-{{ page.fedora-version }}`.
 
+#### Name Service Switch
+
+Images SHOULD have the [nss-myhostname](https://www.freedesktop.org/software/systemd/man/latest/nss-myhostname.html) or `libnss_myhostname.so.2` plugin for the [Name Service Switch](https://www.gnu.org/software/libc/manual/html_node/Name-Service-Switch.html) (or NSS) functionality of the GNU C Library.
+
+Images SHOULD prioritize this `myhostname` service sufficiently high for the `hosts` database in the NSS [configuration file](https://www.gnu.org/software/libc/manual/html_node/NSS-Configuration-File.html), [nsswitch.conf(5)](https://man7.org/linux/man-pages/man5/nsswitch.conf.5.html). Otherwise, it [can](https://github.com/authselect/authselect/pull/366) [cause](https://bugzilla.redhat.com/show_bug.cgi?id=2291062) timeouts or errors when resolving the hostnames of containers created from those images.
+
+For example, this is a valid configuration:
+```conf
+hosts:  files myhostname mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
+```
+
+… and this is not:
+```conf
+hosts:  files mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] myhostname dns
+```
+
 #### Paths
 
 Images SHOULD contain the following start-up snippets for [Bash](https://www.gnu.org/software/bash/), [C shell](https://en.wikipedia.org/wiki/C_shell) and [Z shell](https://www.zsh.org/):
