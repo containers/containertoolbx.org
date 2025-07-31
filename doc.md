@@ -172,7 +172,7 @@ Toolbx specifies the entry points of containers in a certain way. If images spec
 
 #### Label
 
-Images that fulfill these requirements MUST have the `com.github.containers.toolbox="true"` label to be fully recognized by Toolbx.
+Images SHOULD have the `com.github.containers.toolbox="true"` label, if they fulfill these requirements.
 
 This can be achieved through a Containerfile:
 ```conf
@@ -186,7 +186,7 @@ LABEL com.github.containers.toolbox="true"
                      …
 ```
 
-The label is meant to be used by maintainers of images to indicate that they have read this document and tested that their images work with Toolbx.
+The label is meant to be used by maintainers of images to indicate that they have read this document and tested that their images work with Toolbx. Otherwise, the images won't be fully recognized by Toolbx.
 
 #### Name
 
