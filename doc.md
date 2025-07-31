@@ -63,7 +63,7 @@ The entry point of the containers is the [toolbox init-container](https://github
 
 **Toolbx** has built-in support for images corresponding to different operating system [distributions](/distros). It's also possible to create custom Toolbx images, and use them with the `image` [command line](https://github.com/containers/toolbox/blob/main/doc/toolbox-create.1.md) and [configuration file](https://github.com/containers/toolbox/blob/main/doc/toolbox.conf.5.md) options.
 
-All Toolbx images need to satisfy the requirements listed below.
+Custom Toolbx images can be created in different ways and they need to satisfy the requirements listed below.
 
 ### From a Containerfile
 
