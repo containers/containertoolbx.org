@@ -49,7 +49,7 @@ Dive into this manual and unlock the potential to seamlessly switch between vers
 
 ## Container Configuration
 
-Toolbx environments have seamless access to the user's home directory, the Wayland and X11 sockets, networking (including Avahi and CA certificates), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc.. The host file system can be accessed at `/run/host`.
+**Toolbx** environments have seamless access to the user's home directory, the Wayland and X11 sockets, networking (including Avahi and CA certificates), removable devices (like USB sticks), systemd journal, SSH agent, D-Bus, ulimits, /dev and the udev database, etc.. The host file system can be accessed at `/run/host`.
 
 Note that Toolbx makes no promise about security beyond what's already available in the usual command line environment on the host that everybody is familiar with.
 
