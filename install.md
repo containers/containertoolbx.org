@@ -35,7 +35,7 @@ On a Fedora {{ page.fedora-version }} host, this will create a container called 
 [user@hostname ~]$
 ```
 
-## Dependencies and Building
+## Dependencies & Building
 
 Toolbx requires at least Podman 1.6.4, and optionally at least Skopeo 1.10.0, to work.
 
