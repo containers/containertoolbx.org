@@ -227,7 +227,7 @@ Toolbx expects the following paths to have the specified attributes:
 
 #### PKCS #11
 
-Images SHOULD use the `/etc/pkcs11/modules` directory to configure [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) modules. If the directory is present then it MUST be possible for the containers' `root` user to create a regular file.
+Images SHOULD use the `/etc/pkcs11/modules` directory to configure [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) modules, and the directory SHOULD be present. If the directory is present then it MUST be possible for the containers' `root` user to create a regular file inside it.
 
 Images SHOULD have the [p11-kit-client.so](https://p11-glue.github.io/p11-glue/p11-kit/manual/p11-kit.html) PKCS #11 module at one of these paths:
 * `/usr/lib/pkcs11/p11-kit-client.so`
@@ -235,9 +235,7 @@ Images SHOULD have the [p11-kit-client.so](https://p11-glue.github.io/p11-glue/p
 * `/usr/lib/x86_64-linux-gnu/pkcs11/p11-kit-client.so`
 * `/usr/lib64/pkcs11/p11-kit-client.so`
 
-Otherwise, certificates from certificate authorities (or CAs) that are available inside containers created from those images won't be kept synchronized with the host operating system.
-
-File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different path is needed.
+Otherwise, certificates from certificate authorities (or CAs) that are available inside containers created from those images won't be kept synchronized with the host operating system. File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different path is needed.
 
 #### Shells & Terminals
 
