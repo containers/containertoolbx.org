@@ -244,6 +244,18 @@ Images SHOULD have the [p11-kit-client.so](https://p11-glue.github.io/p11-glue/p
 
 Otherwise, certificates from certificate authorities (or CAs) that are available inside containers created from those images won't be kept synchronized with the host operating system. File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different path is needed.
 
+#### RPM Package Manager
+
+Images that include content managed by the [RPM Package Manager](https://rpm.org/) (or RPM) SHOULD use the `/usr/lib/rpm/macros.d` directory for RPM macros, and the directory SHOULD be present. If the directory is present then it MUST be possible for the containers’ `root` user to create a regular file inside it.
+
+The location of the directory for RPM macros can be checked with:
+```console
+⬢[user@toolbox ~]$ rpm --eval '%_rpmmacrodir'
+/usr/lib/rpm/macros.d
+```
+
+Otherwise, some RPM transactions can fail inside containers created from those images. File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different path is needed.
+
 #### Shells & Terminals
 
 Images SHOULD contain the following start-up snippets for [Bash](https://www.gnu.org/software/bash/), [C shell](https://en.wikipedia.org/wiki/C_shell) and [Z shell](https://www.zsh.org/) provided by [VTE](https://gitlab.gnome.org/GNOME/vte):
