@@ -170,6 +170,22 @@ ENTRYPOINT []
 
 Toolbx specifies the entry points of containers in a certain way. If images specify their own entry points then it will prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
+#### Host Name Resolution
+
+Images SHOULD have the [nss-myhostname](https://www.freedesktop.org/software/systemd/man/latest/nss-myhostname.html) or `libnss_myhostname.so.2` plugin for the [Name Service Switch](https://www.gnu.org/software/libc/manual/html_node/Name-Service-Switch.html) (or NSS) functionality of the GNU C Library.
+
+Images SHOULD prioritize this `myhostname` service sufficiently high for the `hosts` database in the NSS [configuration file](https://www.gnu.org/software/libc/manual/html_node/NSS-Configuration-File.html), [nsswitch.conf(5)](https://man7.org/linux/man-pages/man5/nsswitch.conf.5.html). Otherwise, it [can](https://github.com/authselect/authselect/pull/366) [cause](https://bugzilla.redhat.com/show_bug.cgi?id=2291062) timeouts or errors when resolving the hostnames of containers created from those images.
+
+For example, this is a valid configuration:
+```conf
+hosts:  files myhostname mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
+```
+
+… and this is not:
+```conf
+hosts:  files mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] myhostname dns
+```
+
 #### Label
 
 Images SHOULD have the `com.github.containers.toolbox="true"` label, if they fulfill these requirements.
@@ -193,22 +209,6 @@ The label is meant to be used by maintainers of images to indicate that they hav
 Images SHOULD be uniquely named so that they don't collide with those created by others, and their names should reflect their purpose. For example, `ubuntu-toolbox` is a better name than `toolbox` because the `ubuntu-` prefix uniquely identifies it and states its purpose.
 
 By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{ page.fedora-version }}` images will be `fedora-toolbox-{{ page.fedora-version }}`.
-
-#### Name Service Switch
-
-Images SHOULD have the [nss-myhostname](https://www.freedesktop.org/software/systemd/man/latest/nss-myhostname.html) or `libnss_myhostname.so.2` plugin for the [Name Service Switch](https://www.gnu.org/software/libc/manual/html_node/Name-Service-Switch.html) (or NSS) functionality of the GNU C Library.
-
-Images SHOULD prioritize this `myhostname` service sufficiently high for the `hosts` database in the NSS [configuration file](https://www.gnu.org/software/libc/manual/html_node/NSS-Configuration-File.html), [nsswitch.conf(5)](https://man7.org/linux/man-pages/man5/nsswitch.conf.5.html). Otherwise, it [can](https://github.com/authselect/authselect/pull/366) [cause](https://bugzilla.redhat.com/show_bug.cgi?id=2291062) timeouts or errors when resolving the hostnames of containers created from those images.
-
-For example, this is a valid configuration:
-```conf
-hosts:  files myhostname mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
-```
-
-… and this is not:
-```conf
-hosts:  files mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] myhostname dns
-```
 
 #### Paths
 
