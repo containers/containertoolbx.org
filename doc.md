@@ -172,6 +172,13 @@ Toolbx specifies the entry points of containers in a certain way. If images spec
 
 #### Host Name Resolution
 
+Images either MUST NOT have these files or they MUST be regular files:
+* `/etc/host.conf`
+* `/etc/hosts`
+* `/etc/resolv.conf`
+
+Otherwise, it can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working, or the files won't be kept synchronized with the host operating system.
+
 Images SHOULD have the [nss-myhostname](https://www.freedesktop.org/software/systemd/man/latest/nss-myhostname.html) or `libnss_myhostname.so.2` plugin for the [Name Service Switch](https://www.gnu.org/software/libc/manual/html_node/Name-Service-Switch.html) (or NSS) functionality of the GNU C Library.
 
 Images SHOULD prioritize this `myhostname` service sufficiently high for the `hosts` database in the NSS [configuration file](https://www.gnu.org/software/libc/manual/html_node/NSS-Configuration-File.html), [nsswitch.conf(5)](https://man7.org/linux/man-pages/man5/nsswitch.conf.5.html). Otherwise, it [can](https://github.com/authselect/authselect/pull/366) [cause](https://bugzilla.redhat.com/show_bug.cgi?id=2291062) timeouts or errors when resolving the hostnames of containers created from those images.
@@ -213,12 +220,9 @@ By default, Toolbx containers are named after their corresponding images. If the
 #### Paths
 
 Toolbx expects the following paths to have the specified attributes:
-* `/etc/host.conf`: If present, MUST be a regular file.
-* `/etc/hosts`: If present, MUST be a regular file.
 * `/etc/krb5.conf.d`: If present, MUST be a directory where the containers' `root` user can create a regular file.
 * `/etc/localtime`: If present, MUST be a regular file.
 * `/etc/machine-id`: If present, MUST be a regular file.
-* `/etc/resolv.conf`: If present, MUST be a regular file.
 * `/etc/timezone`: If present, MUST be a regular file.
 
 #### PKCS #11
