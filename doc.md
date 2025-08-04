@@ -237,11 +237,11 @@ File an [issue](https://github.com/containers/toolbox/issues/new) if support for
 
 #### Shells & Terminals
 
-Images SHOULD contain the following start-up snippets for [Bash](https://www.gnu.org/software/bash/), [C shell](https://en.wikipedia.org/wiki/C_shell) and [Z shell](https://www.zsh.org/):
+Images SHOULD contain the following start-up snippets for [Bash](https://www.gnu.org/software/bash/), [C shell](https://en.wikipedia.org/wiki/C_shell) and [Z shell](https://www.zsh.org/) provided by [VTE](https://gitlab.gnome.org/GNOME/vte):
 * `/etc/profile.d/vte.csh`
 * `/etc/profile.d/vte.sh`
 
-Otherwise, [VTE](https://gitlab.gnome.org/GNOME/vte)-based terminal emulators will lack some features like remembering the current working directory.
+Otherwise, VTE-based terminal emulators will lack some features like remembering the current working directory.
 
 #### sudo(8)
 
