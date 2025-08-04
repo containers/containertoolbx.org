@@ -142,9 +142,6 @@ Images MUST have these commands:
 * `useradd(8)`
 * `usermod(8)`
 
-Images MUST have these commands to be used on host operating systems with the proprietary NVIDIA driver:
-* `ldconfig(8)`
-
 Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
 Images SHOULD have these commands:
@@ -210,6 +207,16 @@ LABEL com.github.containers.toolbox="true"
 ```
 
 The label is meant to be used by maintainers of images to indicate that they have read this document and tested that their images work with Toolbx. Otherwise, the images won't be fully recognized by Toolbx.
+
+#### ldconfig(8)
+
+Images MUST have `ldconfig(8)` to be used on host operating systems with the proprietary NVIDIA driver. Otherwise, it will prevent [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
+
+Images SHOULD have the dynamic linker cache at `/etc/ld.so.cache`.
+
+Images SHOULD use the `/etc/ld.so.conf.d` directory to configure the dynamic linker cache, and the directory SHOULD be present. If the directory is present then it MUST be possible for the containers’ root user to create a regular file inside it.
+
+File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different path is needed.
 
 #### Name
 
