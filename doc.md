@@ -250,3 +250,8 @@ Images MUST have `sudo(8)` enabled for users belonging to either the `sudo` or `
 Otherwise, it will prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working. File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different group is really needed. However, it's preferable to keep this list as short as possible.
 
 Images SHOULD allow empty passwords for `sudo(8)`. This can be achieved by either adding the `nullok` option to the `PAM(8)` configuration, or by adding the `NOPASSWD` tag to the `sudoers(5)` configuration.
+
+For example, if `sudo(8)` is enabled for the `wheel` group, then this is a valid `sudoers(5)` configuration to allow empty passwords:
+```conf
+%wheel ALL=(ALL) NOPASSWD: ALL
+```
