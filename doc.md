@@ -262,6 +262,14 @@ For example, if `sudo(8)` is enabled for the `wheel` group, then this is a valid
 %wheel ALL=(ALL) NOPASSWD: ALL
 ```
 
+#### Time Zone
+
+Images either MUST NOT have `/etc/localtime` or it MUST be a symbolic link to a file inside the images' `/usr/share/zoneinfo`.
+
+Images either MUST NOT have `/etc/timezone` or it MUST be a regular file.
+
+Otherwise, it can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working, or the files won't be kept synchronized with the host operating system inside containers created from those images.
+
 #### /usr/share/empty
 
 Images SHOULD have an empty `/usr/share/empty` directory. Otherwise, depending on [Podman](https://podman.io/), an instance of `selinuxfs` can get mounted inside containers created from those images at `/sys/fs/selinux`, and it [can](https://github.com/containers/toolbox/issues/47) [cause](https://bugzilla.redhat.com/show_bug.cgi?id=1768075) [various](https://github.com/containers/podman/issues/4452) components (like RPM) inside the containers to misbehave by tricking them into trying to use SELinux.
@@ -284,6 +292,4 @@ Images SHOULD have these commands:
 Otherwise, it won't be possible to use `toolbox(1)` inside containers created from those images.
 
 Toolbx expects the following paths to have the specified attributes:
-* `/etc/localtime`: If present, MUST be a regular file.
 * `/etc/machine-id`: If present, MUST be a regular file.
-* `/etc/timezone`: If present, MUST be a regular file.
