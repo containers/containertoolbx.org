@@ -177,6 +177,12 @@ hosts:  files myhostname mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=retur
 hosts:  files mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] myhostname dns
 ```
 
+#### Kerberos
+
+Images SHOULD use the `/etc/krb5.conf.d` directory to configure Kerberos, and the directory SHOULD be present. If the directory is present then it MUST be possible for the containers’ `root` user to create a regular file inside it.
+
+Otherwise, the Kerberos credential cache from the host operating system won't be available inside containers created from those images. File an [issue](https://github.com/containers/toolbox/issues/new) if support for a different path is needed.
+
 #### Label
 
 Images SHOULD have the `com.github.containers.toolbox="true"` label, if they fulfill these requirements.
@@ -278,7 +284,6 @@ Images SHOULD have these commands:
 Otherwise, it won't be possible to use `toolbox(1)` inside containers created from those images.
 
 Toolbx expects the following paths to have the specified attributes:
-* `/etc/krb5.conf.d`: If present, MUST be a directory where the containers' `root` user can create a regular file.
 * `/etc/localtime`: If present, MUST be a regular file.
 * `/etc/machine-id`: If present, MUST be a regular file.
 * `/etc/timezone`: If present, MUST be a regular file.
