@@ -161,7 +161,7 @@ Images either MUST NOT have these files or they MUST be regular files:
 * `/etc/hosts`
 * `/etc/resolv.conf`
 
-Otherwise, it can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working, or the files won't be kept synchronized with the host operating system.
+Otherwise, it can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working, or the files won't be kept synchronized with the host operating system inside containers created from those images.
 
 Images SHOULD have the [nss-myhostname](https://www.freedesktop.org/software/systemd/man/latest/nss-myhostname.html) or `libnss_myhostname.so.2` plugin for the [Name Service Switch](https://www.gnu.org/software/libc/manual/html_node/Name-Service-Switch.html) (or NSS) functionality of the GNU C Library.
 
