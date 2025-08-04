@@ -284,12 +284,8 @@ Images MUST have these commands:
 * `useradd(8)`
 * `usermod(8)`
 
-Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
+Images either MUST NOT have `/etc/machine-id` or it MUST be a regular file.
 
-Images SHOULD have these commands:
-* `flatpak-spawn(1)`
+Otherwise, it can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
-Otherwise, it won't be possible to use `toolbox(1)` inside containers created from those images.
-
-Toolbx expects the following paths to have the specified attributes:
-* `/etc/machine-id`: If present, MUST be a regular file.
+Images SHOULD have the `flatpak-spawn(1)` command. Otherwise, it won't be possible to use `toolbox(1)` inside containers created from those images.
