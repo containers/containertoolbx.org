@@ -150,6 +150,10 @@ ENTRYPOINT []
 
 Toolbx specifies the entry points of containers in a certain way. If images specify their own entry points then it will prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
 
+#### /home
+
+Images MUST have an empty `/home` directory to be used on host operating systems (like [Fedora Silverblue](https://fedoraproject.org/silverblue/)) where `/home` is a symbolic link to the `/var/home` directory. Otherwise, it will prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
+
 #### Host Name Resolution
 
 Images either MUST NOT have these files or they MUST be regular files:
