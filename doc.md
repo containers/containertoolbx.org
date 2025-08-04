@@ -132,23 +132,6 @@ Toolbx environments are very specifically configured OCI containers. Therefore, 
 
 The key words "MUST", "MUST NOT", and "SHOULD" are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
-#### Commands
-
-Images MUST have these commands:
-* `capsh(1)`
-* `mount(8)`
-* `passwd(1)`
-* `test(1)`
-* `useradd(8)`
-* `usermod(8)`
-
-Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
-
-Images SHOULD have these commands:
-* `flatpak-spawn(1)`
-
-Otherwise, it won't be possible to use `toolbox(1)` inside containers created from those images.
-
 #### Entry Point
 
 Images MUST NOT specify any entry point. This can be checked with:
@@ -224,14 +207,6 @@ Images SHOULD be uniquely named so that they don't collide with those created by
 
 By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{ page.fedora-version }}` images will be `fedora-toolbox-{{ page.fedora-version }}`.
 
-#### Paths
-
-Toolbx expects the following paths to have the specified attributes:
-* `/etc/krb5.conf.d`: If present, MUST be a directory where the containers' `root` user can create a regular file.
-* `/etc/localtime`: If present, MUST be a regular file.
-* `/etc/machine-id`: If present, MUST be a regular file.
-* `/etc/timezone`: If present, MUST be a regular file.
-
 #### PKCS #11
 
 Images SHOULD use the `/etc/pkcs11/modules` directory to configure [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) modules, and the directory SHOULD be present. If the directory is present then it MUST be possible for the containers' `root` user to create a regular file inside it.
@@ -276,3 +251,26 @@ For example, if `sudo(8)` is enabled for the `wheel` group, then this is a valid
 ```conf
 %wheel ALL=(ALL) NOPASSWD: ALL
 ```
+
+#### Various Commands & Paths
+
+Images MUST have these commands:
+* `capsh(1)`
+* `mount(8)`
+* `passwd(1)`
+* `test(1)`
+* `useradd(8)`
+* `usermod(8)`
+
+Toolbx configures containers in very specific ways. The absence of any of these tools can prevent the [toolbox enter](https://github.com/containers/toolbox/blob/main/doc/toolbox-enter.1.md) and [toolbox run](https://github.com/containers/toolbox/blob/main/doc/toolbox-run.1.md) commands from working.
+
+Images SHOULD have these commands:
+* `flatpak-spawn(1)`
+
+Otherwise, it won't be possible to use `toolbox(1)` inside containers created from those images.
+
+Toolbx expects the following paths to have the specified attributes:
+* `/etc/krb5.conf.d`: If present, MUST be a directory where the containers' `root` user can create a regular file.
+* `/etc/localtime`: If present, MUST be a regular file.
+* `/etc/machine-id`: If present, MUST be a regular file.
+* `/etc/timezone`: If present, MUST be a regular file.
