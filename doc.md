@@ -69,10 +69,10 @@ Custom Toolbx images can be created in different ways and they need to satisfy t
 
 One way of creating a custom Toolbx image is to define its contents in a [Containerfile](https://github.com/containers/common/blob/main/docs/Containerfile.5.md) and then use `podman build --squash` to build the image. The easiest is to base the custom image on one of the built-in images, instead of any OCI image or starting from scratch.
 
-Here's a Containerfile for a custom image that adds [Emacs](https://www.gnu.org/software/emacs/), [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/) to the built-in `fedora-toolbox:{{ page.fedora-version }}` image available from `registry.fedoraproject.org`.
+Here's a Containerfile for a custom image that adds [Emacs](https://www.gnu.org/software/emacs/), [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/) to the built-in `fedora-toolbox:{{ page.fedora-version }}` image available from `quay.io/fedora`.
 
 ```conf
-FROM registry.fedoraproject.org/fedora-toolbox:{{ page.fedora-version }}
+FROM quay.io/fedora/fedora-toolbox:{{ page.fedora-version }}
 RUN dnf --assumeyes install emacs gdb gcc
 RUN dnf clean all
 ```
