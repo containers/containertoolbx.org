@@ -55,7 +55,7 @@ Note that Toolbx makes no promise about security beyond what's already available
 
 The user ID and account details from the host operating system are propagated into the Toolbx containers, SELinux label separation is disabled, and the containers have access to the host's Kerberos credentials cache if it's configured to use KCM caches. Crucial configuration files, such as `/etc/host.conf`, `/etc/hosts`, `/etc/localtime`, `/etc/machine-id`, `/etc/resolv.conf` and `/etc/timezone`, inside the containers are kept synchronized with the host.
 
-Toolbx containers can be identified by the `com.github.containers.toolbox` label with various Podman commands (like [inspect](https://docs.podman.io/en/latest/markdown/podman-inspect.1.html)) or by the presence of the `/run/.toolboxenv` file. The `/run/.containerenv` file contains some metadata about the containers.
+Toolbx containers can be identified by the `com.github.containers.toolbox` label with various Podman commands (like [inspect](https://docs.podman.io/en/latest/markdown/podman-inspect.1.html)) or by the presence of the `/run/.toolbxenv` file. The `/run/.containerenv` file contains some metadata about the containers.
 
 The entry point of the containers is the [toolbox init-container](https://github.com/containers/toolbox/blob/main/doc/toolbox-init-container.1.md) command. It plays a role in setting up the container and mitigating the immutable nature of the configuration of [OCI](https://www.opencontainers.org/) containers.
 
