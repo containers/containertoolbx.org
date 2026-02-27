@@ -57,7 +57,7 @@ The user ID and account details from the host operating system are propagated in
 
 Toolbx containers can be identified by the `com.github.containers.toolbox` label with various Podman commands (like [inspect](https://docs.podman.io/en/latest/markdown/podman-inspect.1.html)) or by the presence of the `/run/.toolboxenv` file. The `/run/.containerenv` file contains some metadata about the containers.
 
-The entry point of the containers is the [toolbox init-container](https://github.com/containers/toolbox/blob/main/doc/toolbox-init-container.1.md) command. It plays a role in setting up the containers and mitigating the immutable nature of the configuration of [OCI](https://www.opencontainers.org/) containers.
+The entry point of the containers is the [toolbox init-container](https://github.com/containers/toolbox/blob/main/doc/toolbox-init-container.1.md) command. It plays a role in setting up the containers, along with the options passed to `podman create`, and mitigating the immutable nature of the configuration of [OCI](https://www.opencontainers.org/) containers.
 
 ## Custom Images
 
