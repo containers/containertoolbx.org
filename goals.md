@@ -41,6 +41,6 @@ Examples of use cases that fit these goals can be found [here](/use).
 
   - Toolbx is just as secure as classical package based OSes.
 
-- Supporting multiple container runtimes. Toolbx will exclusively use Podman unless it unlocks significant development and troubleshooting use cases. It will take significant resources to drive changes and test across Docker, Podman, etc..
+- Supporting multiple container runtimes. Toolbx will exclusively use Podman unless it unlocks significant development and troubleshooting use cases. It will take significant resources to drive changes and test across Docker, Podman, etc.
 
 - Using every single OCI image out there. It's always possible to use `podman run`.
