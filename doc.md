@@ -85,6 +85,35 @@ The Containerfile can then be built to create a `my-fedora-toolbox:{{ page.fedor
                      /path/to/Containerfile/dir
 ```
 
+You can then see the resulting image created:
+```console
+[user@hostname ~]$ toolbox list
+IMAGE ID      IMAGE NAME                          CREATED
+7014c16ab5fb  localhost/my-fedora-toolbox:{{ page.fedora-version }}      3 minutes ago
+```
+
+From there you can create the toolbox container from that container image:
+```console
+[user@hostname ~]$ toolbox create --image localhost/my-fedora-toolbox:{{ page.fedora-version }} my-fedora-toolbox
+Created container: my-fedora-toolbox
+Enter with: toolbox enter my-fedora-toolbox
+```
+
+The output of `toolbox list` will then change to:
+```console
+[user@hostname ~]$ toolbox list
+IMAGE ID      IMAGE NAME                          CREATED
+7014c16ab5fb  localhost/my-fedora-toolbox:{{ page.fedora-version }}      5 minutes ago
+
+CONTAINER ID  CONTAINER NAME     CREATED        STATUS   IMAGE NAME
+ec7526fa5069  my-fedora-toolbox  2 minutes ago  created  localhost/my-fedora-toolbox:{{ page.fedora-version }}
+```
+
+From there, you can enter your toolbox container via:
+```console
+toolbox enter my-fedora-toolbox
+```
+
 ### From a Container
 
 Another possibility is to create a custom Toolbx image from an existing container by using `podman commit --squash`. The easiest is to use a Toolbx container, instead of any OCI container.
