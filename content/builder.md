@@ -16,4 +16,4 @@ It also features **Toolbx** configuration workflows, allowing you to run and tes
 
 GNOME shell developers are [using toolbx](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) for example.
 
-![GNOME Shell running inside a toolbx container](../assets/builder-shell-toolbx.webp){: .full}
+<img src="../assets/builder-shell-toolbx.webp" alt="GNOME Shell running inside a toolbx container" class="full">

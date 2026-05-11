@@ -1,0 +1,21 @@
+baseURL = "https://containertoolbx.org"
+locale = "en-us"
+title = "toolbx"
+
+[markup.highlight]
+  noClasses = false
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.extensions.attributes]
+  title = true
+  block = true
+
+[params]
+  description = "Tool for interactive command line environments on Linux"
+  sourceurl = "https://github.com/containers/containertoolbx.org"
+
+[permalinks]
+  page = "/:title/"
+  section = "/:title/"

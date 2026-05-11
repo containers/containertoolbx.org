@@ -35,7 +35,7 @@ If you know something that isn't listed, please [file an issue](https://github.c
 * [Video talk —  Toolbx: developing GNOME on OSTree based OSes](https://www.youtube.com/watch?v=Pd4XSi4zrPs&t=16250s) by Debarshi Ray, GUADEC
 
 #### 2022
-* [Toolbx — running the same host binary on Arch Linux, Fedora, Ubuntu, etc. containers](https://debarshiray.wordpress.com/2022/10/02/toolbx-running-the-same-binary-on-arch-linux-fedora-ubuntu-etc-containers/) by Debarshi Ray
+* [Toolbx — running the same host binary on Arch Linux, Fedora, Ubuntu, etc. containers](https://debarshiray.wordpress.com/2022/10.02/toolbx-running-the-same-binary-on-arch-linux-fedora-ubuntu-etc-containers/) by Debarshi Ray
 * [Toolbx — bypassing the immutability of OCI containers](https://debarshiray.wordpress.com/2022/07/22/toolbx-bypassing-the-immutability-of-oci-containers/) by Debarshi Ray
 * [How to use Go Toolset container images](https://developers.redhat.com/articles/2022/07/21/how-use-go-toolset-container-images) by Alejandro Sáez Morollón, Red Hat Developer Blog
 * [Video talk — Toolbx: developing on and troubleshooting emerging OSes](https://www.youtube.com/watch?v=ZTjQQvJtPZ0) by Debarshi Ray, Community Central

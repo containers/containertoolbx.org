@@ -14,7 +14,7 @@ This is particularly useful on [OSTree](https://ostreedev.github.io/ostree/) bas
 
 
 * Table of Contents
-{:toc}
+{{< toc >}}
 
 
 ## Development
@@ -35,7 +35,7 @@ The development environments can be set up inside Toolbx containers in the same 
 
 [Builder](https://flathub.org/apps/org.gnome.Builder), the IDE for GNOME, has integrated Toolbx in a way that allows developing and testing desktop applications literally at the push of a button. The application is built, run and tested against the development tools and software development kits installed inside a specific Toolbx container.
 
-![GNOME Builder building GNOME Maps against a Toolbx container](../assets/builder-desktop-app.png){: .full}
+<img src="../assets/builder-desktop-app.png" alt="GNOME Builder building GNOME Maps against a Toolbx container" class="full">
 
 
 ### Web Applications
@@ -51,7 +51,7 @@ Building system components like [GNOME Shell](https://gitlab.gnome.org/GNOME/gno
 
 Developing GNOME Shell used to be quite cumbersome and satisfying the dependencies a chore. The Shell developers have streamlined their [workflow using Toolbx](https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/tools/toolbox?ref_type=heads) considerably. [Builder](https://flathub.org/apps/org.gnome.Builder), the IDE for GNOME, has integrated Toolbx in a way that allows running GNOME Shell in nested mode as it was an application. This streamlines the *develop > test > debug > submit merge request* workflow considerably.
 
-![GNOME Builder running Shell from inside a Toolbx container](../assets/builder-shell-toolbx.webp){: .full}
+<img src="../assets/builder-shell-toolbx.webp" alt="GNOME Builder running Shell from inside a Toolbx container" class="full">
 
 
 ### Wayland Session
@@ -68,7 +68,7 @@ Use `ctrl+alt+f<n>` to switch to a Linux console and log in. Then:
 ⬢[user@toolbox ~]$ dbus-run-session gnome-shell --wayland
 ```
 
-![Full GNOME session running from inside a Toolbx container](../assets/gnome-full-session.png){: .full}
+<img src="../assets/gnome-full-session.png" alt="Full GNOME session running from inside a Toolbx container" class="full">
 
 
 ### Boot from Container
@@ -78,13 +78,13 @@ Not just that — it's possible to boot from a **Toolbx** container. Here's how 
 Create a Toolbx container from the [OCI](https://opencontainers.org/) variant of the Fedora Silverblue image:
 ```console
 [user@hostname ~]$ toolbox create \
-                     --image quay.io/fedora-ostree-desktops/silverblue:{{ page.fedora-version }} \
-                     silverblue-toolbox-{{ page.fedora-version }}
+                     --image quay.io/fedora-ostree-desktops/silverblue:{{< param fedora-version >}} \
+                     silverblue-toolbox-{{< param fedora-version >}}
 ```
 
 Alter it by installing DNF as an example:
 ```console
-[user@hostname ~]$ toolbox enter silverblue-toolbox-{{ page.fedora-version }}
+[user@hostname ~]$ toolbox enter silverblue-toolbox-{{< param fedora-version >}}
 ⬢[user@toolbox ~]$ sudo rpm-ostree install dnf
 ⬢[user@toolbox ~]$ exit
 ```
@@ -93,24 +93,24 @@ Create an OCI image from the altered Toolbx container:
 ```console
 [user@hostname ~]$ podman commit \
                      --squash \
-                     silverblue-toolbox-{{ page.fedora-version }} \
-                     localhost/silverblue-toolbox:{{ page.fedora-version }}
+                     silverblue-toolbox-{{< param fedora-version >}} \
+                     localhost/silverblue-toolbox:{{< param fedora-version >}}
 ```
 
 Expose it to [rpm-ostree](https://coreos.github.io/rpm-ostree/):
 ```console
-[user@hostname ~]$ mkdir /var/tmp/silverblue-toolbox-{{ page.fedora-version }}-00
+[user@hostname ~]$ mkdir /var/tmp/silverblue-toolbox-{{< param fedora-version >}}-00
 [user@hostname ~]$ podman save \
                      --format oci-dir \
-                     --output /var/tmp/silverblue-toolbox-{{ page.fedora-version }}-00 \
-                     localhost/silverblue-toolbox:{{ page.fedora-version }}
+                     --output /var/tmp/silverblue-toolbox-{{< param fedora-version >}}-00 \
+                     localhost/silverblue-toolbox:{{< param fedora-version >}}
 [user@hostname ~]$ rpm-ostree rebase \
-                     ostree-unverified-image:oci:/var/tmp/silverblue-toolbox-{{ page.fedora-version }}-00
+                     ostree-unverified-image:oci:/var/tmp/silverblue-toolbox-{{< param fedora-version >}}-00
 ```
 
 Reboot.
 
-![Fedora Silverblue booted from a Toolbx container](../assets/fedora-silverblue-boot-from.png){: .full}
+<img src="../assets/fedora-silverblue-boot-from.png" alt="Fedora Silverblue booted from a Toolbx container" class="full">
 
 
 ## Troubleshooting
@@ -156,7 +156,7 @@ Similarly, **Toolbx** can be used to look at the logs for all processes running 
 
 **Say goodbye to juggling containers and terminals!**
 
-![Jekyll in a container](../assets/ptyxis.webp){: .full}
+<img src="../assets/ptyxis.webp" alt="Jekyll in a container" class="full">
 
 Imagine this: you fire up Ptyxis, select your desired Toolbx container, and boom — you're in! No more configuration hassles or context switching. Ptyxis acts as your direct portal to any container environment, giving you granular control and access to all the tools you need within a familiar terminal interface.
 

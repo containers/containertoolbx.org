@@ -29,18 +29,13 @@ toolbox create --distro ubuntu --release 22.04
 
 Supported combinations are:
 
-|-------+-----------------------------------------------------------------------------------------|
 |Distro |Release                                                                                  |
 |-------|-----------------------------------------------------------------------------------------|
 |arch   |latest or rolling                                                                        |
-|-------+-----------------------------------------------------------------------------------------|
-|fedora |\<release\> or f\<release\> eg., {{ page.fedora-version }} or f{{ page.fedora-version }} |
-|-------+-----------------------------------------------------------------------------------------|
-|rhel   |\<major\>.\<minor\> eg., {{ page.rhel-version }}                                         |
-|-------+-----------------------------------------------------------------------------------------|
-|ubuntu |\<YY\>.\<MM\> eg., {{ page.ubuntu-version }}                                             |
-|-------+-----------------------------------------------------------------------------------------|
+|fedora |\<release\> or f\<release\> eg., {{< param fedora-version >}} or f{{< param fedora-version >}} |
+|rhel   |\<major\>.\<minor\> eg., {{< param rhel-version >}}                                         |
+|ubuntu |\<YY\>.\<MM\> eg., {{< param ubuntu-version >}}                                             |
 
 Once you enter the distro environment with `toolbox enter` you have access to all the `.deb` packages the distro provide, regardless of the host operating system you use.
 
-![apt-get on Fedora](../assets/apt-get.png){:.full}
+<img src="../assets/apt-get.png" alt="apt-get on Fedora" class="full">

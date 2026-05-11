@@ -29,7 +29,7 @@ Note that Toolbx makes no promise about security beyond what's already available
 Examples of use cases that fit this description can be found [here](/use).
 
 * Table of Contents
-{:toc}
+{{< toc >}}
 
 ## Manual
 
@@ -69,19 +69,19 @@ Custom Toolbx images can be created in different ways and they need to satisfy t
 
 One way of creating a custom Toolbx image is to define its contents in a [Containerfile](https://github.com/containers/common/blob/main/docs/Containerfile.5.md) and then use `podman build --squash` to build the image. The easiest is to base the custom image on one of the built-in images, instead of any OCI image or starting from scratch.
 
-Here's a Containerfile for a custom image that adds [Emacs](https://www.gnu.org/software/emacs/), [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/) to the built-in `fedora-toolbox:{{ page.fedora-version }}` image available from `registry.fedoraproject.org`.
+Here's a Containerfile for a custom image that adds [Emacs](https://www.gnu.org/software/emacs/), [GCC](https://gcc.gnu.org/) and [GDB](https://www.sourceware.org/gdb/) to the built-in `fedora-toolbox:{{< param fedora-version >}}` image available from `registry.fedoraproject.org`.
 
 ```conf
-FROM registry.fedoraproject.org/fedora-toolbox:{{ page.fedora-version }}
+FROM registry.fedoraproject.org/fedora-toolbox:{{< param fedora-version >}}
 RUN dnf --assumeyes install emacs gdb gcc
 RUN dnf clean all
 ```
 
-The Containerfile can then be built to create a `my-fedora-toolbox:{{ page.fedora-version }}` image:
+The Containerfile can then be built to create a `my-fedora-toolbox:{{< param fedora-version >}}` image:
 ```console
 [user@hostname ~]$ podman build \
                      --squash \
-                     --tag localhost/my-fedora-toolbox:{{ page.fedora-version }} \
+                     --tag localhost/my-fedora-toolbox:{{< param fedora-version >}} \
                      /path/to/Containerfile/dir
 ```
 
@@ -89,18 +89,18 @@ The Containerfile can then be built to create a `my-fedora-toolbox:{{ page.fedor
 
 Another possibility is to create a custom Toolbx image from an existing container by using `podman commit --squash`. The easiest is to use a Toolbx container, instead of any OCI container.
 
-Here's how to create a custom image similar to the one above, but based on a Toolbx container created from the built-in `ubuntu-toolbox:{{ page.ubuntu-version }}` image available from `quay.io/toolbx`.
+Here's how to create a custom image similar to the one above, but based on a Toolbx container created from the built-in `ubuntu-toolbox:{{< param ubuntu-version >}}` image available from `quay.io/toolbx`.
 
 Create the Toolbx container:
 ```console
-[user@hostname ~]$ toolbox create --distro ubuntu --release {{ page.ubuntu-version }}
-Created container: ubuntu-toolbox-{{ page.ubuntu-version }}
-Enter with: toolbox enter ubuntu-toolbox-{{ page.ubuntu-version }}
+[user@hostname ~]$ toolbox create --distro ubuntu --release 22.04
+Created container: ubuntu-toolbox-{{< param ubuntu-version >}}
+Enter with: toolbox enter ubuntu-toolbox-{{< param ubuntu-version >}}
 ```
 
 Alter it by installing Emacs, GCC and GDB:
 ```console
-[user@hostname ~]$ toolbox enter ubuntu-toolbox-{{ page.ubuntu-version }}
+[user@hostname ~]$ toolbox enter ubuntu-toolbox-{{< param ubuntu-version >}}
 ⬢[user@toolbox ~]$ sudo apt update
 Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
 Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
@@ -118,12 +118,12 @@ Reading state information... Done
 ⬢[user@toolbox ~]$ exit
 ```
 
-A `my-ubuntu-toolbox:{{ page.ubuntu-version }}` image can then be created from the altered container:
+A `my-ubuntu-toolbox:{{< param ubuntu-version >}}` image can then be created from the altered container:
 ```console
 [user@hostname ~]$ podman commit \
                      --squash \
-                     ubuntu-toolbox-{{ page.ubuntu-version }} \
-                     localhost/my-ubuntu-toolbox:{{ page.ubuntu-version }}
+                     ubuntu-toolbox-{{< param ubuntu-version >}} \
+                     localhost/my-ubuntu-toolbox:{{< param ubuntu-version >}}
 ```
 
 ### Requirements
@@ -137,7 +137,7 @@ The key words "MUST", "MUST NOT", and "SHOULD" are to be interpreted as describe
 Images MUST NOT specify any entry point. This can be checked with:
 ```console
 [user@hostname ~]$ podman inspect \
-                     --format {% raw %}'{{ .Config.Entrypoint }}'{% endraw %} \
+                     --format '{{ .Config.Entrypoint }}' \
                      --type image \
                      quay.io/toolbx/arch-toolbox:latest
 []
@@ -215,7 +215,7 @@ File an [issue](https://github.com/containers/toolbox/issues/new) if support for
 
 Images SHOULD be uniquely named so that they don't collide with those created by others, and their names should reflect their purpose. For example, `ubuntu-toolbox` is a better name than `toolbox` because the `ubuntu-` prefix uniquely identifies it and states its purpose.
 
-By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{ page.fedora-version }}` images will be `fedora-toolbox-{{ page.fedora-version }}`.
+By default, Toolbx containers are named after their corresponding images. If the image has a tag, then the tag is included in the name of the container, but it's separated by a hyphen, not a colon. For example, the default name for containers created from the `arch-toolbox:latest` images will be `arch-toolbox-latest` and those from the `fedora-toolbox:{{< param fedora-version >}}` images will be `fedora-toolbox-{{< param fedora-version >}}`.
 
 #### PKCS #11
 
