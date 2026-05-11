@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#9141AC"><!-- primary color -->
+
+  <title>{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}</title>
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <link rel="stylesheet" href="{{ "style.css" | relURL }}">
+  
+  <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}" />
+  <link rel="icon" sizes="144x144" href="{{ "apple-touch-icon.png" | relURL }}">
+  
+  <!-- Twitter -->
+  <meta property="twitter:title" content="{{ site.Title }}">
+  <meta property="twitter:image" content="{{ "assets/card.png" | absURL }}" />
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:description" content="{{ site.Params.description }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ site.Title }}">
+  <meta property="og:url" content="{{ site.BaseURL }}">
+  <meta property="og:description" content="{{ site.Params.description }}">
+  <meta property="og:image" content="{{ "assets/card.png" | absURL }}">
+</head>

@@ -1,0 +1,20 @@
+<footer>
+  <nav>
+    <ul class="bottomlinks">
+      {{ range site.Data.links }}
+      {{ if in .url "http" }}
+        <li><a class="extlink" href="{{ .url }}">{{ .lnk }} {{ partial "extlink.svg" . }}</a></li>
+      {{ else }}
+        <li><a href="{{ .url | relURL }}">{{ .lnk }}</a></li>
+      {{ end }}
+      {{ end }}
+
+      <li><span class="socials">
+        <a href="https://floss.social/@containertoolbx" class="social" rel="me">{{ partial "mastodon.svg" . }}</a>
+        <a href="https://github.com/containers/toolbox" class="social">{{ partial "github.svg" . }}</a>
+      </span></li>
+    </ul>
+  </nav>
+  <p>&copy; {{ site.Title }}, 2021 &ndash; 2026<br>
+  <a href="{{ site.Params.sourceurl }}">Website source</a></p>
+</footer>

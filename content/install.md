@@ -17,11 +17,11 @@ Toolbx is installed by default on [Fedora Silverblue](https://fedoraproject.org/
 ### Create your Toolbx container:
 ```console
 [user@hostname ~]$ toolbox create
-Created container: fedora-toolbox-{{ page.fedora-version }}
+Created container: fedora-toolbox-{{< param fedora-version >}}
 Enter with: toolbox enter
 [user@hostname ~]$
 ```
-On a Fedora {{ page.fedora-version }} host, this will create a container called `fedora-toolbox-{{ page.fedora-version }}`. On an Arch Linux host, it will create one called `arch-linux-latest`, and so on.
+On a Fedora 42 host, this will create a container called `fedora-toolbox-{{< param fedora-version >}}`. On an Arch Linux host, it will create one called `arch-linux-latest`, and so on.
 
 ### Enter the Toolbx:
 ```console
@@ -31,7 +31,7 @@ On a Fedora {{ page.fedora-version }} host, this will create a container called 
 
 ### Remove a Toolbx container:
 ```console
-[user@hostname ~]$ toolbox rm fedora-toolbox-{{ page.fedora-version }}
+[user@hostname ~]$ toolbox rm fedora-toolbox-{{< param fedora-version >}}
 [user@hostname ~]$
 ```
 

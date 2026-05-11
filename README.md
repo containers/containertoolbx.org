@@ -1,27 +1,21 @@
 Toolbx website
 ==============
 
-To set up jekyll locally on Fedora:
+To set up Hugo locally:
 
 1) Set up Toolbx container and clone the repo
-```
+```bash
 toolbox create toolbx-website --release 42
 toolbox enter toolbx-website
-mkdir src && cd src
+mkdir -p src && cd src
 git clone git@github.com:containers/containertoolbx.org.git
-cd containertoolbox.org
+cd containertoolbx.org
 ```
 
-2) Set up ruby and install rvm
-```
-sudo dnf install -y curl gcc-c++
-sudo dnf builddep -y ruby
-\curl -sSL https://get.rvm.io | bash -s stable
-echo "source ~/.rvm/scripts/rvm" >> $HOME/.bash_profile
-source $HOME/.bash_profile
-rvm install ruby-3.1.2
-bundle install
-bundle exec jekyll s
+2) Install Hugo and run the server
+```bash
+sudo dnf install -y hugo
+hugo server -D
 ```
 
 The CI should deploy the site automatically to [https://containertoolbx.org](https://containertoolbx.org).
