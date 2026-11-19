@@ -11,6 +11,10 @@ layout: default
 
 If you know something that isn't listed, please [file an issue](https://github.com/containers/containertoolbx.org/issues/new) so we can add it!
 
+#### 2026
+
+* [My Cybersecurity Tools Stack: Containers](https://www.eduardorobles.com/posts/tool-stack-containers/) by Eduardo Robles
+
 #### 2025
 
 * [Embracing sysexts for system development under Silverblue](https://blogs.gnome.org/carlosg/2025/03/08/embracing-sysexts-for-system-development-under-silverblue/) by Carlos Garnacho
